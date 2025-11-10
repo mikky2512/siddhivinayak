@@ -1,17 +1,15 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
-import bgimage from "./image2.jpg";
+
 const GlobalStyle = createGlobalStyle`
 .home-hero {
   min-height: 80vh;
   display:flex;
   align-items:center;
   justify-content:center;
-  background-image: url(${bgimage});
-  background-size: cover;
-  background-position: center;
   position:relative;
-  color: #e4eaeaff;
+  color: #EFECE3;
+  background-color: #8FABD4;
   text-align:center;
 }
 
@@ -19,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
   content:"";
   position:absolute;
   inset:0;
+  
  }
 
 .hero-inner{

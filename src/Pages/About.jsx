@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
   padding: 120px 50px;
   text-align: center;
   position: relative;
+  background-color: #8FABD4;
 }
 
 .about-hero::after {
@@ -31,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
   text-align: center;
   max-width: 850px;
   margin: auto;
+  background-color: #4A70A9;
 }
 
 .about-gallery {

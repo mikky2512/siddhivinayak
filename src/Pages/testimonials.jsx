@@ -21,6 +21,7 @@ const Testimonials = () => {
       <div className="testimonial-list">
         {testimonials.map((t, index) => (
           <div key={index} className="testimonial">
+            <h4>- {t.name}</h4>
             <p>"{t.feedback}"</p>
             <div className="stars">
               {[...Array(5)].map((_, i) => (
@@ -30,7 +31,7 @@ const Testimonials = () => {
                 />
               ))}
             </div>
-            <h4>- {t.name}</h4>
+            
           </div>
         ))}
       </div>

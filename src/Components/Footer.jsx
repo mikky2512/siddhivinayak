@@ -2,12 +2,12 @@ import React from "react";
 import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
 .footer {
-  background:#09779f;
+  background:#000000;
   color:#ddd;
   text-align:center;
   padding:10px 12px;
   margin-top:auto;
-  border-top:1px solid rgba(29, 44, 49, 0.03);
+  border-top:1px solid rgba(37, 21, 70, 0.03);
 }
 `;
 

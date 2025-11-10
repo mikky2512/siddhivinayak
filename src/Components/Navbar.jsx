@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:#edf3f7;
+  background-color:#EFECE3;
   color:black;
   padding:16px 28px;
   position:sticky;
