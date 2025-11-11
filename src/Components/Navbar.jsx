@@ -14,7 +14,13 @@ const GlobalStyle = createGlobalStyle`
   z-index:20;
   height: 80px;
 }
-
+.navbar img {
+  height: 50px;
+  width: 150px;
+  margin-right: 660px;
+  align-items: center;
+  margin-left: -16px;
+}
 .brand { margin:0; font-size:20px; }
 
 .nav-right ul {
@@ -35,10 +41,8 @@ const GlobalStyle = createGlobalStyle`
 function Navbar() {
   return (
     <header className="navbar">
-      <div className="nav-left">
          <GlobalStyle />
-        <h2 className="brand"> Siddhivinayak </h2>
-      </div>
+        <img src="logo.png" ></img>
 
       <nav className="nav-right">
         <ul>
