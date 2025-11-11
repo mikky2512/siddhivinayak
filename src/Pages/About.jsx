@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
 .about-content {
   padding: 50px;
   text-align: center;
-  max-width: 850px;
+  max-width: 1500px;
   margin: auto;
   background-color: #4A70A9;
 }
