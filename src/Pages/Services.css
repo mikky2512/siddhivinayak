@@ -1,0 +1,95 @@
+.services-page {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(90deg, #5c6bc0, #3949ab);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Service sections */
+.service-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 10%;
+  flex-wrap: wrap;
+}
+
+.service-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-section img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-section .text {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Two-column section */
+.two-col {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 60px 10%;
+}
+
+.two-col .card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 10px;
+  background: #f9f9f9;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.two-col .card:hover {
+  transform: translateY(-5px);
+}
+
+.two-col img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .service-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .two-col {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+}
