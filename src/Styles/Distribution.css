@@ -1,0 +1,47 @@
+.distribution-page {
+  padding: 3rem 1.5rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.distribution-page h1 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.distribution-page p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: #007bff;
+  border: 1px solid #007bff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .distribution-page h1 {
+    font-size: 1.6rem;
+  }
+  .distribution-page p {
+    font-size: 1rem;
+  }
+}

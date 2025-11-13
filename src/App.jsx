@@ -8,7 +8,8 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Services from "./Pages/Services";
 import "./App.css";
-
+import Fulfillment from "./Pages/Fulfillment";
+import Distribution from "./Pages/Distribution";
 function App() {
   return (
     <div className="app">
@@ -22,6 +23,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/services" element={<Services />}/>
             <Route path="/testimonials" element={<testimonials />}/>
+            <Route path="/services/fulfillment" element={<Fulfillment />} />
+           <Route path="/services/distribution" element={<Distribution />} />
           </Routes>
         </main>
 

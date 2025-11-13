@@ -1,10 +1,16 @@
 import React from "react";
-import "./Services.css";
+
 import F1 from './Images/F1.jpg';
 import F2 from './Images/F2.jpg';
 import F3 from './Images/F3.jpg';
 import F4 from './Images/F4.jpg';
-const ServicesPage = () => {
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import "../Styles/Services.css";
+import "./Distribution";
+import "./Fulfillment";
+
+const Services= () => {
   return (
     <div className="services-page">
       {/* Hero Section */}
@@ -51,34 +57,46 @@ const ServicesPage = () => {
       </section>
 
       {/* Fulfillment & Distribution Centers */}
-      <section className="two-col">
-        <div className="card">
-          <img
-            src={F3}
-            alt="Fulfillment"
-          />
-          <h3>Fulfillment Process</h3>
+      
+        <section className="services-container">
+        <motion.div
+          className="service-card"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          whileHover={{ scale: 1.05 }}
+        >
+          <img src= {F3} alt="Fulfillment" />
+          <h2>Fulfillment Centers</h2>
           <p>
             Our nationwide fulfillment centers provide fast and cost-effective
-            storage, sortation, and order fulfillment near major consumption
-            hubs.
+            storage, sortation, and order fulfillment near major consumption hubs.
           </p>
-        </div>
-        <div className="card">
-          <img
-            src={F4}
-            alt="Distribution"
-          />
-          <h3>Distribution Centers</h3>
+          <Link to="/Services/Fulfillment" className="learn-more-btn">
+            Learn More →
+          </Link>
+        </motion.div>
+
+        <motion.div
+          className="service-card"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          whileHover={{ scale: 1.05 }}
+        >
+          <img src= {F4} alt="Distribution" />
+          <h2>Distribution Centers</h2>
           <p>
             Our distribution centers near key consumer and industry hubs ensure
             efficient inventory management and smooth shipment flow.
           </p>
-        </div>
+          <Link to="/Services/Distribution" className="learn-more-btn">
+            Learn More →
+          </Link>
+        </motion.div>
       </section>
-
     </div>
   );
 };
 
-export default ServicesPage;
+export default Services;
