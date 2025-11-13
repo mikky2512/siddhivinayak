@@ -2,7 +2,7 @@ import React from "react";
 
 import F1 from './Images/F1.jpg';
 import F2 from './Images/F2.jpg';
-import F3 from './Images/F3.jpg';
+import F3 from './Images/C1.jpg';
 import F4 from './Images/F4.jpg';
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
