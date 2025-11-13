@@ -12,9 +12,22 @@ const GlobalStyle = createGlobalStyle`
   background-size: contain;
   background-position: center;
   position:relative;
-  color: #000000ff;
+  color: #fefefeff;
   background-color: #aa9f9fff;
   text-align:center;
+}
+  .home-hero::before{
+content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(${bgimage});
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px) brightness(40%);
+  z-index: 0;
 }
 
 .home-hero::after{
@@ -41,7 +54,8 @@ text-align: center ;
 
 .hero-inner p{
 text-align: center;
- color: #101010ff;
+font-size:20px;
+ color: #f6efefff;
   opacity:0.9;
  }
  .hero-inner h3{
@@ -49,6 +63,20 @@ text-align: center;
   margin:0 0 10px;
   vertical-align: text-top;  
 }
+   /* Existing laptop media query */
+  @media (min-width: 769px) {
+    main {
+      flex-direction: row;
+    }
+    .content {
+      width: 70%;
+    }
+    .sidebar {
+      width: 30%;
+      display: block;
+    }
+  }
+    
 
 `;
 

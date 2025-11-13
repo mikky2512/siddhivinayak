@@ -36,13 +36,22 @@ const GlobalStyle = createGlobalStyle`
   text-decoration:none;
   font-weight:600;
 }
+   /* Responsive Styles for Phones */
+  @media (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      height: auto;
+      padding: 10px 20px;
+      align-items: flex-start;
+    }
+  }
 `;
 
 function Navbar() {
   return (
     <header className="navbar">
          <GlobalStyle />
-        <img src="logo.png" ></img>
+        <img src="logo.png" alt="logo"></img>
 
       <nav className="nav-right">
         <ul>
@@ -50,7 +59,6 @@ function Navbar() {
           <li><Link to="/about">About</Link></li>
           <li><Link to="/contact">Contact</Link></li>
           <li> <Link to="/services">Services</Link></li>
-          
         </ul>
       </nav>
     </header>
