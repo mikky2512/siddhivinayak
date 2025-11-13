@@ -1,6 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
+
+function Navbar() {
+  return (
+    <div>
+    <header className="navbar">
+         <GlobalStyle />
+        <img src="logo.png" alt="logo"></img>
+      <nav className="nav-right">
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+          <li> <Link to="/services">Services</Link></li>
+        </ul>
+      </nav>
+    </header>
+    </div>
+  );
+}
+
+export default Navbar;
+
 const GlobalStyle = createGlobalStyle`
 .navbar {
   display:flex;
@@ -8,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
   align-items:center;
   background-color:#EFECE3;
   color:black;
-  padding:16px 28px;
+  padding:16px 40px;
   position:sticky;
   top:0;
   z-index:20;
@@ -36,33 +58,59 @@ const GlobalStyle = createGlobalStyle`
   text-decoration:none;
   font-weight:600;
 }
-   /* Responsive Styles for Phones */
-  @media (max-width: 600px) {
-    .navbar {
-      flex-direction: column;
-      height: auto;
-      padding: 10px 20px;
-      align-items: flex-start;
-    }
+  /* For Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 25px;
   }
-`;
 
-function Navbar() {
-  return (
-    <header className="navbar">
-         <GlobalStyle />
-        <img src="logo.png" alt="logo"></img>
+  .nav-right ul {
+    gap: 20px;
+  }
 
-      <nav className="nav-right">
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-          <li> <Link to="/services">Services</Link></li>
-        </ul>
-      </nav>
-    </header>
-  );
+  .navbar img {
+    width: 130px;
+  }
 }
 
-export default Navbar;
+/* For Small Tablets / Large Phones (max-width: 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .nav-right ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .nav-right a {
+    font-size: 16px;
+  }
+}
+
+/* For Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px 15px;
+  }
+
+  .navbar img {
+    width: 120px;
+    height: auto;
+  }
+
+  .nav-right ul {
+    gap: 10px;
+  }
+
+  .nav-right a {
+    font-size: 15px;
+  }
+}
+`;
