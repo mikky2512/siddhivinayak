@@ -19,33 +19,18 @@ const GlobalStyle = createGlobalStyle`
   color: #222;
 }
 
-.testimonials-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
 .testimonial-card {
   background: #f9f9f9;
   border-radius: 12px;
   padding: 25px;
   width: 300px;
+  margin: auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease;
-  margin: 0 10px;
 }
 
 .testimonial-card:hover {
   transform: translateY(-5px);
-}
-
-.customer-img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
 }
 
 .stars {
@@ -89,25 +74,13 @@ const Testimonials = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 3,          // Show 3 cards at once
+    speed: 600,
+    slidesToShow: 1,   // ✅ Show only one slide at a time
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
-    responsive: [             // Make responsive for smaller screens
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-        }
-      }
-    ]
+    autoplaySpeed: 2500,  // ✅ Time between slides
+    pauseOnHover: false,  // ✅ Keep autoplay even when hovered
+    arrows: false,        // Optional: Hide arrows for cleaner look
   };
 
   return (
