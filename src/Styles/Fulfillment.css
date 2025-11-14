@@ -36,6 +36,54 @@
   color: #fff;
 }
 
+/* =======================
+   Table Section
+======================= */
+.table-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 40px 20px;
+}
+
+.table-title {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.process-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.process-table th,
+.process-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.process-table th {
+  background-color: #4f46e5;
+  color: white;
+  font-weight: bold;
+}
+
+.process-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.process-table tr:hover {
+  background-color: #e8e8ff;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .fulfillment-page h1 {
@@ -43,5 +91,42 @@
   }
   .fulfillment-page p {
     font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .card {
+    height: 260px;
+  }
+
+  .card-front p {
+    font-size: 0.8rem;
+  }
+
+  .table-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .fulfillment-title {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    height: 240px;
+  }
+
+  .card-front h2 {
+    font-size: 1rem;
+  }
+
+  .card-front p {
+    font-size: 0.75rem;
+  }
+
+  .process-table th,
+  .process-table td {
+    font-size: 0.85rem;
+    padding: 8px;
   }
 }

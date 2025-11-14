@@ -1,11 +1,7 @@
 .distribution-page {
-  padding: 3rem 1.5rem;
-  max-width: 900px;
-  margin: 2rem auto;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  background-color: #f9f9f9;
 }
 
 .distribution-page h1 {
@@ -21,12 +17,159 @@
   margin-bottom: 2rem;
 }
 
+/* Hero Section */
+.hero {
+  
+  color: rgb(236, 236, 238);
+  text-align: center;
+  padding: 120px 20px;
+  background-attachment: fixed;
+  position: relative;
+}
+.hero-img-section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+  height: fit-content;
+}
+
+.hero-img{
+  width: 100%;
+  max-width: 500px;
+  height: 50%;
+  object-fit: contain;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(25, 18, 18, 0.55);
+}
+
+.hero h1, .hero p {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Content Sections */
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  gap: 40px;
+  flex-wrap: wrap;
+  background-color: #fff;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.section.reverse {
+  flex-direction: row-reverse;
+  background-color: #f5f5f5;
+}
+
+.section:hover {
+  transform: translateY(-4px);
+}
+
+.image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.content h2 {
+  color: #0a66c2;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.content p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.content ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #0a66c2;
+}
+
+.table-responsive 
+{
+.styled-table {
+width: 100%;
+border-collapse: collapse;
+background: white;
+border-radius: 12px;
+overflow: hidden;
+}
+
+
+.styled-table thead {
+background: #004aad;
+color: white;
+}
+
+
+.styled-table th,
+.styled-table td {
+padding: 14px;
+text-align: left;
+border-bottom: 1px solid #ddd;
+}
+
+
+.styled-table tbody tr:nth-child(even) {
+background: #f2f7ff;
+}
+
+
+.styled-table tbody tr:hover {
+background: #e8f0ff;
+transition: 0.3s;
+}
+
+
+
 .back-btn {
   text-decoration: none;
   color: #007bff;
   border: 1px solid #007bff;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
   font-weight: 600;
   transition: all 0.3s ease;
 }
@@ -44,4 +187,40 @@
   .distribution-page p {
     font-size: 1rem;
   }
+}
+
+.fade-in {
+animation: fadeIn 1s ease-in-out;
+}
+
+
+.slide-up {
+animation: slideUp 1s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+
+@keyframes slideUp {
+from { transform: translateY(40px); opacity: 0; }
+to { transform: translateY(0); opacity: 1; }
+}
+
+
+@media (max-width: 768px)
+ {
+  .hero{height: 50vh;}
+.hero-section h1 { font-size: 30px; }
+.hero-section p { font-size: 16px; }
+
+
+.styled-table th,
+.styled-table td {
+font-size: 14px;
+}
+}
 }

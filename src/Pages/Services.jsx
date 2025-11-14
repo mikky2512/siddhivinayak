@@ -15,7 +15,7 @@ const Services= () => {
     <div className="services-page">
       {/* Hero Section */}
       <section className="hero">
-        <h1>Warehouse Facility</h1>
+        <h1>Warehouse Services</h1>
       </section>
 
       {/* Dedicated Warehousing */}
