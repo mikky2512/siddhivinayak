@@ -1,149 +1,226 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 import { createGlobalStyle } from "styled-components";
+
 const GlobalStyle = createGlobalStyle`
-.contact {
-  width: 100%;
-  background: #fff;
+.contact-page {
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  padding: 40px 20px;
 }
 
-/* Map */
-.map-container iframe {
-  width: 100%;
-  height: 300px;
-  border: 0;
-}
-
-/* Contact layout */
-.contact-section {
-  display: flex;
-  justify-content: center;
+/* GRID: Left Form | Right Details */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
   gap: 40px;
-  padding: 60px 50px;
-  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
 }
 
-/* Left Section */
-.contact-details {
-  max-width: 350px;
+/* LEFT: FORM */
+.left-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+.left-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.left-form form {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 18px;
 }
 
-.detail-box {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-}
-
-.icon {
-  font-size: 30px;
-}
-
-.detail-box h4 {
-  font-size: 18px;
-  margin: 0;
-}
-
-.detail-box p {
-  font-size: 14px;
-  color: #777;
-  margin-top: 5px;
-}
-
-/* Form */
-.contact-form {
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
+.left-form input,
+.left-form textarea {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   border: 1px solid #ccc;
-  font-size: 14px;
   border-radius: 6px;
 }
 
-.contact-form textarea {
-  height: 130px;
-  resize: none;
-}
-
-.contact-form button {
-  background: transparent;
-  border: 1.5px solid #d27b6a;
-  padding: 10px;
-  color: #d27b6a;
+.left-form button {
+  background: #d27b6a;
+  color: white;
+  padding: 14px;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
   cursor: pointer;
-  border-radius: 5px;
   transition: 0.3s;
 }
 
-.contact-form button:hover {
-  background: #d27b6a;
-  color: white;
+.left-form button:hover {
+  background: #b45d53;
 }
-`
 
-function Contact() {
+/* RIGHT: DETAILS */
+.right-details {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  height: fit-content;
+}
+
+.right-details h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #222;
+}
+
+.right-details p {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #555;
+}
+
+/* SMALL MAP INSIDE DETAILS */
+.small-map {
+  margin-top: 20px;
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.small-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* FEEDBACK SECTION */
+.feedback-section {
+  margin: 60px auto;
+  max-width: 700px;
+}
+
+.feedback-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.feedback-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+.feedback-card textarea {
+  width: 100%;
+  height: 120px;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.feedback-card button {
+  margin-top: 15px;
+  background: #d27b6a;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.feedback-card button:hover {
+  background: #b45d53;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+`;
+
+const ContactPage = () => {
+  const { register, handleSubmit, reset } = useForm();
+
+  const onSubmit = (data) => {
+    console.log("Form Submitted:", data);
+    alert("Thank you! Your request has been submitted.");
+    reset();
+  };
+
   return (
-    <div className="contact">
-<GlobalStyle />
-      {/* Google Map */}
-      <div className="map-container">
-        <iframe
-          title="map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.984161031728!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzE4LjAiTiA3N8KwMzUnMzEuMCJF!5e0!3m2!1sen!2sin!4v1612345678901"
-          allowFullScreen=""
-          loading="lazy"
-        ></iframe>
-      </div>
+    <div className="contact-page">
+      <GlobalStyle />
 
-      <div className="contact-section">
+      {/* LEFT FORM | RIGHT DETAILS */}
+      <div className="contact-wrapper">
 
-        {/* Left Details */}
-        <div className="contact-details">
-          <div className="detail-box">
-            <span className="icon">🏠</span>
-            <div>
-              <h4>XYZ Road, Abc Building</h4>
-              <p>Vadodara,Gujarat</p>
-            </div>
-          </div>
+        {/* LEFT SIDE FORM */}
+        <div className="left-form">
+          <h2>Submit Your Requirements</h2>
 
-          <div className="detail-box">
-            <span className="icon">📞</span>
-            <div>
-              <h4>+1 0123456789</h4>
-              <p>Mon - Sat | 10 AM to 6 PM</p>
-            </div>
-          </div>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <input {...register("name", { required: true })} placeholder="Your Name" />
+            <input {...register("phone", { required: true })} placeholder="Your Phone" />
+            <input {...register("email", { required: true })} placeholder="Your Email" />
+            <input {...register("subject")} placeholder="Subject" />
+            <textarea {...register("message", { required: true })} placeholder="Your Message"></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
 
-          <div className="detail-box">
-            <span className="icon">✉️</span>
-            <div>
-              <h4>info@yourmail.com</h4>
-              <p>Email us your query</p>
-            </div>
+        {/* RIGHT SIDE DETAILS WITH MAP INSIDE */}
+        <div className="right-details">
+          <h3>Contact Us</h3>
+          <p><strong>Name:</strong> Siddhivinayak</p>
+          <p><strong>Email:</strong> info@siddhivinayak.com</p>
+          <p><strong>Call:</strong> +91 74330 77939</p>
+          <p><strong>WhatsApp:</strong> +91 96620 74322</p>
+
+          <h3>Address</h3>
+          <p>
+            156, 1st Floor, C Tower, K10 Atlantis,<br />
+            Near Genda Circle, Opp Honest Restaurant,<br />
+            Vadodara, Gujarat 390007
+          </p>
+
+          {/* SMALL MAP INSIDE CONTACT DETAILS */}
+          <div className="small-map">
+            <iframe
+              title="map"
+              src="https://www.google.com/maps/embed?pb=!1m18..."
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
 
-        {/* Right Form */}
-        <form className="contact-form">
-          <input type="text" placeholder="Enter your name" />
-          <input type="email" placeholder="Enter email address" />
-          <input type="text" placeholder="Enter your subject" />
-          <textarea placeholder="Message"></textarea>
-          <button type="submit">Send Message</button>
-        </form>
+      </div>
 
+      {/* FEEDBACK SECTION */}
+      <div className="feedback-section">
+        <h2>Share Your Feedback</h2>
+
+        <div className="feedback-card">
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <textarea
+              {...register("feedback", { required: true })}
+              placeholder="Write your feedback..."
+            ></textarea>
+
+            <button type="submit">Submit Feedback</button>
+          </form>
+        </div>
       </div>
     </div>
   );
-}
+};
 
-export default Contact;
+export default ContactPage;
