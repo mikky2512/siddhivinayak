@@ -4,6 +4,9 @@ import bgimage from "./Images/hea.jpg";
 import bgimage1 from "./Images/w1.jpg";
 import bgimage2 from "./Images/w2.jpg";
 import bgimage3 from "./Images/w4.jpg";
+import bgimage4 from "./Images/w5.jpg";
+import bgimage5 from "./Images/w6.jpg";
+import bgimage6 from "./Images/w7.jpg";
 
 function Home() {
   return (
@@ -11,11 +14,14 @@ function Home() {
     <section className="home-hero">
       <div className="hero-inner">
         <GlobalStyle />
-       <h1>Forklift Solutions to Elevate Your Operations</h1>
-        <h3> Headline:</h3>
-        <p>Power. Precision. Performance.</p>
-        <h3>Subheadline:</h3>
-        <p>Your trusted partner for reliable forklifts, seamless lifting solutions, and unmatched service support.</p>
+       <h1>
+        Forklift Solutions <br />
+        <span>to Elevate</span> <br />
+        <span>Your Operations</span> <br />
+        </h1>
+        <p><b><i>Forklifts are essential machines used for lifting and moving heavy materials in warehouses, factories, and industrial sites. They help improve work efficiency, reduce manual effort, and ensure safe handling of goods.</i></b></p>
+        <p><i>Forklifts play a vital role in modern industries by ensuring smooth handling of heavy goods.</i></p>
+        <p>A forklift is a powerful industrial vehicle used to lift, move, and transport heavy materials with ease. Commonly used in warehouses, factories, construction sites, and logistics hubs, forklifts improve efficiency, safety, and productivity. Available in various types like diesel, electric, and LPG, they are designed to handle different load capacities and working environments.</p>
         <div className="h_button">
           <button type="button">
         <a href="/contact">Get in touch</a>
@@ -23,18 +29,17 @@ function Home() {
         </div>
       </div>
     </section>
-    <div className="home">  </div>
        {/* About */}
-
+<br />
      <section className="home-infor" flex="3">
-    <p>Crafting Precision Solutions for Your Unique Needs.</p>
+    <h3>Crafting Precision Solutions for Your Unique Needs.</h3>
     <h2>Our Solutions Tailored to You</h2>
 
     
     <div className="card-group">
   <div className="card">
      <img 
-     src={bgimage2} 
+     src={bgimage1} 
      alt="forklift1" 
      />
     <div className="card-body">
@@ -44,7 +49,7 @@ function Home() {
   </div>
   <div className="card">
      <img 
-     src={bgimage1} 
+     src={bgimage2} 
      alt="forklift2"
      />
     <div className="card-body">
@@ -62,13 +67,71 @@ function Home() {
       <p >Reliable maintenance with genuine parts for all forklift models. Keep your forklifts running smoothly with expert servicing and original spare parts.</p>
        </div>
   </div>
+  </div>
+  </section>
+  <br />
+  {/* section of service */}
+  <section className="service-intro">
+    <div className="service-left">
+<img src={bgimage6} alt="big-forklift" className="big-forklift"/>
 </div>
-        </section>
+<div className="serivce-right">
+  <h1>
+      Providing Premier Forklift <br />
+      <strong>Sales, Services, and Parts</strong> <br />
+      to Businesses Across India.
+  </h1>
+    <ul>
+      <li>Fixing all forklift makes and models for reliable performance.</li>
+      <li>Daily, weekly, and monthly rental options.</li>
+      <li>New and reconditioned forklifts for every budget.</li>
+      <li>Battery & charger solutions + repair services.</li>
+      <li>Financing options for new equipment.</li>
+      <li>Repairs in diesel, LPG, and electric forklifts.</li>
+      <li>Stocked parts for all forklift brands.</li>
+      <li>Premium Forklift Solutions Across India</li>
+    </ul>
+</div>
+    
+  </section>
+    {/* NEW SECTION LIKE THE DEMO WEBSITE IMAGE */}
+<section className="about-forklift">
+  <div className="about-left">
+<img src={bgimage4} alt="Worker" className="main-worker" />
+<div className="small-lift-box">
+<img src={bgimage5} alt="Forklift Small" />
+</div>
+</div>
+<div className="about-right">
+<h1 className="tag">GET TO KNOW US</h1>
+<h1>Welcome to Forklift Rent and Services</h1>
+<p>
+We specialize in providing top‑notch solutions for all your forklift
+needs. With years of expertise in the industry, we understand the
+importance of efficiency, safety, and reliability in material handling
+operations.
+</p>
+<p className="bold-text">
+We have 20+ years of experience in forklift and forklift services.
+</p>
+<div className="call-box">
+<span className="call-icon">📞</span>
+<p>
+Have any question? Give us a call <br />
+<strong>+91 90334 76660</strong>
+</p>
+</div>
+
+</div>
+</section>
+<br />
     </div>
+
   );
 }
 
 export default Home;
+
 const GlobalStyle = createGlobalStyle`
 .home-hero::before{
 content: "";
@@ -106,10 +169,10 @@ content: "";
   padding: 60px 40px;
   background: rgba(211, 203, 203, 0.4);
   border-radius: 20px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
   box-shadow: 0 4px 40px rgba(0,0,0,0.3);
 }
-.home-infor p{
+.home-infor h3{
 text-align: center;
   margin:0 0 10px;
 }
@@ -151,13 +214,14 @@ text-align: center;
 }
 .hero-inner h1 {
   font-weight: 700;
+  font-size:60;
   letter-spacing: -1px;
 }
 
 .hero-inner p {
-  line-height: 1.6;
+  line-height:2;
 }
-   .hero-inner h2{
+   .hero-inner h3{
   text-align: center;
   margin:0 0 10px;
   vertical-align: text-top;  
@@ -166,7 +230,7 @@ text-align: center;
   padding: 14px 26px;
   font-size: 1.1rem;
   border-radius: 30px;
-  background: #ffd500;
+  background: #12b2ecff;
   border: none;
   font-weight: 600;
   cursor: pointer;
@@ -175,13 +239,144 @@ text-align: center;
 
 .h_button button:hover {
   transform: translateY(-3px);
-  background: #ffce00;
+  background: #12b2ecff;
 }
 
 .h_button button a {
-  color: #000;
+  color: #000000ff;
   text-decoration: none;
 }
+/* NEW ABOUT SECTION */
+.about-forklift {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  text-align: center;
+}
+
+.main-worker {
+width: 380px;
+border-radius: 16px;
+
+}
+.about-left {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-lift-box {
+position: absolute;
+  bottom: -40px;
+  right: -40px;
+background: #ffffffff;
+padding: 10px;
+border-radius: 12px;
+box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.small-lift-box img {
+width: 160px;
+border-radius: 10px;
+
+}
+.about-right {
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+.about-right h1 {
+font-size: 2rem;
+font-weight: 700;
+}
+
+.tag {
+color: #3949ab;
+font-weight: 600;
+margin-bottom: 10px;
+text-align: center; /* centered text */
+ /* ensure block alignment */
+width: 100%; /* full width for perfect centering */
+}
+
+.bold-text {
+font-weight: 700;
+margin: 15px 0;
+}
+
+.call-box {
+display: flex;
+align-items: center;
+background: #e8ffe8;
+padding: 12px 20px;
+border-radius: 8px;
+margin: 10px 0;
+}
+
+.call-icon {
+font-size: 2rem;
+color: #00b300;
+}
+
+.explore-btn {
+padding: 12px 28px;
+border: none;
+background: #000;
+color: #fff;
+border-radius: 8px;
+cursor: pointer;
+font-weight: 600;
+transition: 0.3s;
+}
+
+.explore-btn:hover {
+background: #333;
+}
+
+/* NEW SERVICE   SECTION */
+/* DEMO STYLE SECTION */
+.service-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  width: 100%;
+  margin: 0 auto;
+  gap: 40px;
+  background: #4bc8f6ee; /* light peach background like demo */
+}
+
+.service-left img.big-forklift {
+  width: 500px;
+    bottom: -40px;
+  right: -40px;
+  border-radius: 8px;
+}
+
+.service-right {
+  max-width: 600px;
+}
+
+.service-right h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.service-right ul {
+  text-align: left;
+  list-style-type: disc;
+  margin-left: 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
 @media (max-width: 600px) {
   .hero-inner {
     padding: 30px 20px;
