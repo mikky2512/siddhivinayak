@@ -46,7 +46,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 .left-form button {
-  background: #d27b6a;
+  background: #3949ab;
   color: white;
   padding: 14px;
   border: none;
@@ -57,7 +57,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 .left-form button:hover {
-  background: #b45d53;
+  background: #3949ab;
 }
 
 /* RIGHT: DETAILS */
@@ -125,7 +125,7 @@ const GlobalStyle = createGlobalStyle`
 
 .feedback-card button {
   margin-top: 15px;
-  background: #d27b6a;
+  background: #3949ab;
   color: #fff;
   padding: 12px;
   border: none;

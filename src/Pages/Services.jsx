@@ -11,64 +11,112 @@ import S5 from "./Images/S5.jpg";
 import S6 from "./Images/S6.jpg";
 import S7 from "./Images/S7.jpg";
 import S8 from "./Images/S8.jpg";
+import S9 from "./Images/S9.jpg";
 
+
+
+
+const fadeUp = {
+  initial: { opacity: 0, y: 50 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.6 },
+};
 
 const Services = () => {
   return (
     <div className="services-page">
-      {/* Hero Section */}
+
+      {/* HERO SECTION */}
       <section className="hero">
-        <h1>Warehouse Services</h1>
+        <h1> Services</h1>
       </section>
 
-      {/* Dedicated Warehousing */}
-      <section className="service-section">
+      {/* 1️⃣ Dedicated Warehousing */}
+      <motion.section
+        className="service-section"
+        initial="initial"
+        whileInView="whileInView"
+        transition="transition"
+        variants={fadeUp}
+      >
         <div className="image">
           <img src={S1} alt="Warehousing" />
         </div>
+
         <div className="text">
           <h2>Dedicated Warehousing</h2>
           <p>
-            A solution for customers needing exclusive storage and value-added warehouse services with skilled manpower, advanced equipment, and WMS support.
+            A solution for customers needing exclusive storage and value-added warehouse
+            services with skilled manpower, advanced equipment, and WMS support.
           </p>
         </div>
-      </section>
+      </motion.section>
 
-      {/* Multi User Facilities */}
-      <section className="service-section reverse">
+      {/* ⭐ 2️⃣ NEW CARD (Between Dedicated & Multi-User) */}
+      <motion.section
+        className="service-section reverse"
+        initial="initial"
+        whileInView="whileInView"
+        transition="transition"
+        variants={fadeUp}
+      >
         <div className="image">
-          <img src={S2} alt="Multi User Facilities" />
+          <img src={S2} alt="Inventory Management" />
         </div>
+
+        <div className="text">
+          <h2>Inventory Management</h2>
+          <p>
+            Real-time stock visibility, automated reports, stock accuracy processes, and 
+            cycle counting with advanced WMS support for smooth warehouse operations.
+          </p>
+        </div>
+      </motion.section>
+
+      {/* 3️⃣ Multi-User Facilities */}
+      <motion.section
+        className="service-section"
+        initial="initial"
+        whileInView="whileInView"
+        transition="transition"
+        variants={fadeUp}
+      >
+        <div className="image">
+          <img src={S3} alt="Multi User Facilities" />
+        </div>
+
         <div className="text">
           <h2>Multi-User Facilities</h2>
           <p>
-            Shared and scalable warehousing solutions that reduce distribution costs and increase operational efficiency.
+            Shared and scalable warehousing solutions that reduce distribution costs 
+            and increase operational efficiency.
           </p>
         </div>
-      </section>
+      </motion.section>
 
-      {/* Warehouse Services Cards */}
+      {/* ------------- Warehouse Services Cards ------------- */}
       <section className="warehouse-cards">
         <h2 className="center-title">Warehouse Services</h2>
+
         <div className="services-container">
           {[
             {
-              img: S3,
+              img: S4,
               title: "Storage Optimization",
               desc: "Maximized racking, pallet organization, and optimized warehouse flow.",
             },
             {
-              img: S4,
+              img: S5,
               title: "Material Handling",
               desc: "Safe and efficient movement of goods using modern equipment.",
             },
             {
-              img: S5,
+              img: S6,
               title: "Quality Checks",
               desc: "Inspection and QC procedures for inbound and outbound shipments.",
             },
             {
-              img: S6,
+              img: S7,
               title: "Warehouse Security",
               desc: "24/7 CCTV monitoring, controlled access & secure storage zones.",
             },
@@ -78,7 +126,7 @@ const Services = () => {
               className="service-card"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
               whileHover={{ scale: 1.05 }}
             >
               <img src={card.img} alt={card.title} />
@@ -89,8 +137,9 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Two Main Centers */}
+      {/* ---------- TWO MAIN CENTERS ---------- */}
       <h2 className="center-title">Two Main Centers</h2>
+
       <section className="services-container">
         <motion.div
           className="service-card"
@@ -99,11 +148,10 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           whileHover={{ scale: 1.05 }}
         >
-          <img src={S7} alt="Fulfillment" />
+          <img src={S8} alt="Fulfillment" />
           <h2>Fulfillment Centers</h2>
-          <p>
-            Fast and cost-effective storage, sortation, and order fulfillment located near key consumer hubs.
-          </p>
+          <p>Fast and cost-effective storage, sortation, and order fulfillment.</p>
+
           <Link to="/Services/Fulfillment" className="learn-more-btn">
             Learn More →
           </Link>
@@ -116,20 +164,18 @@ const Services = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           whileHover={{ scale: 1.05 }}
         >
-          <img src={S8} alt="Distribution" />
+          <img src={S9} alt="Distribution" />
           <h2>Distribution Centers</h2>
-          <p>
-            Efficient inventory movement and streamlined dispatches positioned near industry hubs.
-          </p>
+          <p>Efficient inventory movement and streamlined dispatches.</p>
+
           <Link to="/Services/Distribution" className="learn-more-btn">
             Learn More →
           </Link>
         </motion.div>
       </section>
+
     </div>
   );
 };
 
 export default Services;
-
-
