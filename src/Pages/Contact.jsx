@@ -148,58 +148,68 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const ContactPage = () => {
-  const { register, handleSubmit, reset } = useForm();
 
-  // MAIN FORM — no testimonial saving
+  // SEPARATED FORM HANDLERS ----------
+  const {
+    register: registerMain,
+    handleSubmit: handleSubmitMain,
+    reset: resetMain,
+  } = useForm();
+
+  const {
+    register: registerFeedback,
+    handleSubmit: handleSubmitFeedback,
+    reset: resetFeedback,
+  } = useForm();
+
+  // MAIN REQUIREMENTS FORM — does NOT affect testimonials
   const onSubmitMain = (data) => {
     console.log("Main Form Submitted:", data);
     alert("Thank you! Your request has been submitted.");
-    reset();
+    resetMain();
   };
 
-  // FEEDBACK FORM — saves to testimonials localStorage
+  // FEEDBACK FORM — saves feedback to testimonials ONLY
   const onSubmitFeedback = (data) => {
     console.log("Feedback Submitted:", data);
 
-    // Load old testimonials
     const existing = JSON.parse(localStorage.getItem("testimonials")) || [];
 
-    // Create new testimonial object
     const newFeedback = {
       name: data.name || "Anonymous User",
       message: data.feedback,
       rating: 5,
     };
 
-    // Save to localStorage
     localStorage.setItem("testimonials", JSON.stringify([newFeedback, ...existing]));
 
     alert("Thank you for your feedback!");
-    reset();
+    resetFeedback();
   };
 
   return (
     <div className="contact-page">
       <GlobalStyle />
 
-      {/* LEFT FORM | RIGHT DETAILS */}
+      {/* MAIN FORM + COMPANY DETAILS */}
       <div className="contact-wrapper">
 
-        {/* LEFT SIDE FORM */}
+        {/* LEFT MAIN FORM */}
         <div className="left-form">
           <h2>Submit Your Requirements</h2>
 
-          <form onSubmit={handleSubmit(onSubmitMain)}>
-            <input {...register("name", { required: true })} placeholder="Your Name" />
-            <input {...register("phone", { required: true })} placeholder="Your Phone" />
-            <input {...register("email", { required: true })} placeholder="Your Email" />
-            <input {...register("subject")} placeholder="Subject" />
-            <textarea {...register("message", { required: true })} placeholder="Your Message"></textarea>
+          <form onSubmit={handleSubmitMain(onSubmitMain)}>
+            <input {...registerMain("name", { required: true })} placeholder="Your Name" />
+            <input {...registerMain("phone", { required: true })} placeholder="Your Phone" />
+            <input {...registerMain("email", { required: true })} placeholder="Your Email" />
+            <input {...registerMain("subject")} placeholder="Subject" />
+            <textarea {...registerMain("message", { required: true })} placeholder="Your Message"></textarea>
+
             <button type="submit">Submit</button>
           </form>
         </div>
 
-        {/* RIGHT DETAILS */}
+        {/* RIGHT CONTACT DETAILS */}
         <div className="right-details">
           <h3>Contact Us</h3>
           <p><strong>Name:</strong> Siddhivinayak</p>
@@ -224,16 +234,16 @@ const ContactPage = () => {
         </div>
       </div>
 
-      {/* FEEDBACK SECTION */}
+      {/* FEEDBACK FORM (COMPLETELY SEPARATE) */}
       <div className="feedback-section">
         <h2>Share Your Feedback</h2>
 
         <div className="feedback-card">
-          <form onSubmit={handleSubmit(onSubmitFeedback)}>
-            <input {...register("name")} placeholder="Your Name (optional)" />
+          <form onSubmit={handleSubmitFeedback(onSubmitFeedback)}>
+            <input {...registerFeedback("name")} placeholder="Your Name (optional)" />
 
             <textarea
-              {...register("feedback", { required: true })}
+              {...registerFeedback("feedback", { required: true })}
               placeholder="Write your feedback..."
             ></textarea>
 
