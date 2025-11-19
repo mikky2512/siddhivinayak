@@ -4,7 +4,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 .footer {
-  background: #1a1a1a;
+  background: #333D79;
   color: #fff;
   padding: 60px 20px 20px;
   font-family: "Poppins", sans-serif;

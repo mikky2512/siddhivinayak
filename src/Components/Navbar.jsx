@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background-color:#EFECE3;
+  background-color:#333D79;
   color:black;
   padding:16px 40px;
   position:sticky;
@@ -54,7 +54,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 .nav-right a {
-  color:black;
+  color:#fff;
   text-decoration:none;
   font-weight:600;
 }

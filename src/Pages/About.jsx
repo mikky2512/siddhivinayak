@@ -8,7 +8,7 @@ import A2 from "./Images/A2.jpg";
 const GlobalStyle = createGlobalStyle`
 .about-page {
   font-family: "Poppins", sans-serif;
-  background: #fff;
+  background: #FAEBEF;
   color: #333;
   overflow-x: hidden;
 }
@@ -80,12 +80,13 @@ const GlobalStyle = createGlobalStyle`
 }
 
 .about-text h3 {
+  color: #333D79
   font-size: 1.8rem;
   margin-bottom: 18px;
 }
 
 .about-text p {
-  color: #555;
+  color: #333D79;
   line-height: 1.7;
   font-size: 1.1rem;
 }

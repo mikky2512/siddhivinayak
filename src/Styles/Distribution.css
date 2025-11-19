@@ -1,7 +1,7 @@
 .distribution-page {
   font-family: "Poppins", sans-serif;
   color: #222;
-  background-color: #f9f9f9;
+  background-color: #FAEBEF;
 }
 
 .distribution-page h1 {
@@ -22,7 +22,7 @@
   
   color: rgb(236, 236, 238);
   text-align: center;
-  padding: 120px 20px;
+  padding: 10px 20px;
   background-attachment: fixed;
   position: relative;
 }
@@ -36,18 +36,19 @@
 
 .hero-img{
   width: 100%;
-  max-width: 500px;
-  height: 50%;
+  max-width: 100px;
+  height: 30%;
   object-fit: contain;
 }
 .hero::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(25, 18, 18, 0.55);
+  background-color: #333D79;
 }
 
 .hero h1, .hero p {
+  color: #ddd;
   position: relative;
   z-index: 1;
 }
@@ -99,7 +100,7 @@
 }
 
 .content h2 {
-  color: #0a66c2;
+  color: #333D79;
   font-size: 2rem;
   margin-bottom: 15px;
 }
@@ -124,7 +125,7 @@
   content: "✔";
   position: absolute;
   left: 0;
-  color: #0a66c2;
+  color: #333D79;
 }
 
 .table-responsive 
@@ -140,7 +141,7 @@ overflow: hidden;
 
 
 .styled-table thead {
-background: #004aad;
+background: #333D79;
 color: white;
 }
 
@@ -167,8 +168,8 @@ transition: 0.3s;
 
 .back-btn {
   text-decoration: none;
-  color: #007bff;
-  border: 1px solid #007bff;
+  color: #333D79;
+  border: 1px solid #333D79;
   padding: 0.8rem 1.2rem;
   border-radius: 10px;
   font-weight: 600;
@@ -176,7 +177,7 @@ transition: 0.3s;
 }
 
 .back-btn:hover {
-  background-color: #007bff;
+  background-color: #333D79;
   color: #fff;
 }
 

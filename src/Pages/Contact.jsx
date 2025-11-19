@@ -46,7 +46,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 .left-form button {
-  background: #3949ab;
+  background: #333D79;
   color: white;
   padding: 14px;
   border: none;
@@ -57,7 +57,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 .left-form button:hover {
-  background: #303f9f;
+  background: #333D79;
 }
 
 /* RIGHT: DETAILS */
