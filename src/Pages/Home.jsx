@@ -1,391 +1,378 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
-import bgimage from "./Images/hea.jpg";
-import bgimage1 from "./Images/w1.jpg";
-import bgimage2 from "./Images/w2.jpg";
-import bgimage3 from "./Images/w4.jpg";
-import bgimage4 from "./Images/w5.jpg";
-import bgimage5 from "./Images/w6.jpg";
-import bgimage6 from "./Images/w7.jpg";
+import bgimage from "./Images/h1.jpg";
+import bgimage2 from "./Images/h2.jpg";
+import bgimage3 from "./Images/h3.jpg";
+import bgimage4 from "./Images/h4.jpg";
+import bgimage5 from "./Images/h5.jpg";
+import bgimage6 from "./Images/h6.jpg";
+
 
 function Home() {
   return (
-     <div className="home-info">
-    <section className="home-hero">
-      <div className="hero-inner">
-        <GlobalStyle />
-       <h1>
-        Forklift Solutions <br />
-        <span>to Elevate</span> <br />
-        <span>Your Operations</span> <br />
-        </h1>
-        <p><b><i>Forklifts are essential machines used for lifting and moving heavy materials in warehouses, factories, and industrial sites. They help improve work efficiency, reduce manual effort, and ensure safe handling of goods.</i></b></p>
-        <p><i>Forklifts play a vital role in modern industries by ensuring smooth handling of heavy goods.</i></p>
-        <p>A forklift is a powerful industrial vehicle used to lift, move, and transport heavy materials with ease. Commonly used in warehouses, factories, construction sites, and logistics hubs, forklifts improve efficiency, safety, and productivity. Available in various types like diesel, electric, and LPG, they are designed to handle different load capacities and working environments.</p>
-        <div className="h_button">
-          <button type="button">
-        <a href="/contact">Get in touch</a>
-        </button>
+    <div className="home-info">
+      <GlobalStyle />
+
+      {/* HERO SECTION */}
+      <section className="home-hero">
+        <div className="hero-inner">
+          <h1>
+            Siddhivinayak Enterprise <br />
+            <span>A Warehouse & Storage</span> <br />
+            <span>Company</span>
+          </h1>
+          <div className="h_button">
+            <button><a href="/contact">Get in Touch</a></button>
+          </div>
         </div>
-      </div>
-    </section>
-       {/* About */}
-<br />
-     <section className="home-infor" flex="3">
-    <h3>Crafting Precision Solutions for Your Unique Needs.</h3>
-    <h2>Our Solutions Tailored to You</h2>
+      </section>
 
-    
-    <div className="card-group">
-  <div className="card">
-     <img 
-     src={bgimage1} 
-     alt="forklift1" 
-     />
-    <div className="card-body">
-      <h3>Forklift Sales</h3>
-      <p>High-quality forklifts for all warehouse and industrial needs. Durable, powerful, and built for daily heavy use.Upgrade your material handling with powerful and efficient forklifts at the best prices.</p>
-      </div>
-  </div>
-  <div className="card">
-     <img 
-     src={bgimage2} 
-     alt="forklift2"
-     />
-    <div className="card-body">
-      <h3 >Forklift rentals</h3>
-      <p >Flexible rental plans for daily, weekly, or monthly needs. Rent high-performance forklifts for any warehouse or industrial operation—whenever you need them.</p>
-       </div>
-  </div>
-  <div className="card">
-     <img 
-     src={bgimage3} 
-     alt="forklift3"
-     />
-    <div className="card-body">
-      <h3 >Service and Spare Parts</h3>
-      <p >Reliable maintenance with genuine parts for all forklift models. Keep your forklifts running smoothly with expert servicing and original spare parts.</p>
-       </div>
-  </div>
-  </div>
-  </section>
-  <br />
-  {/* section of service */}
-  <section className="service-intro">
-    <div className="service-left">
-<img src={bgimage6} alt="big-forklift" className="big-forklift"/>
-</div>
-<div className="serivce-right">
-  <h1>
-      Providing Premier Forklift <br />
-      <strong>Sales, Services, and Parts</strong> <br />
-      to Businesses Across India.
-  </h1>
+      {/* IMAGE LAYOUT */}
+     <section className="home-infor">
+  <div className="home-left">
+    <h2>Our Warehouse Services</h2>
+    <p>
+      At Siddhivinayak Enterprise A Warehouse & Storage Company, we offer reliable and efficient warehouse services designed to support your business operations.
+      Whether you need short-term storage, long-term inventory solutions, or complete logistics support, we provide safe, secure, and organized storage facilities to meet your needs.
+    </p>
     <ul>
-      <li>Fixing all forklift makes and models for reliable performance.</li>
-      <li>Daily, weekly, and monthly rental options.</li>
-      <li>New and reconditioned forklifts for every budget.</li>
-      <li>Battery & charger solutions + repair services.</li>
-      <li>Financing options for new equipment.</li>
-      <li>Repairs in diesel, LPG, and electric forklifts.</li>
-      <li>Stocked parts for all forklift brands.</li>
-      <li>Premium Forklift Solutions Across India</li>
+      <li>🧾 <b>Inventory Management</b>
+        <ul>
+          <li>Real-time tracking of stock levels</li>
+          <li>Barcode and RFID-based item monitoring</li>
+          <li>FIFO/LIFO inventory methods</li>
+        </ul>
+      </li>
+      <li>🚚 <b>Loading & Unloading</b>
+        <ul>
+          <li>Professional material handling team</li>
+          <li>Modern equipment such as forklifts, pallets & conveyors</li>
+          <li>Safe and quick transfer of goods</li>
+        </ul>
+      </li>
+      <li>📦 <b>Packaging & Labeling</b>
+        <ul>
+          <li>Secure packaging for all types of products</li>
+          <li>Custom labeling & barcoding solutions</li>
+          <li>Damage prevention and quality assurance</li>
+        </ul>
+      </li>
+      <li>🛡️ <b>Safe & Secure Storage</b>
+        <ul>
+          <li>24/7 CCTV surveillance</li>
+          <li>Fire safety and climate-controlled zones</li>
+          <li>Access control for high-value goods</li>
+        </ul>
+      </li>
+      <li>🚀 <b>Fast Dispatch & Distribution</b>
+        <ul>
+          <li>Same-day or scheduled shipping</li>
+          <li>Fleet management and delivery support</li>
+          <li>Route optimization for faster delivery</li>
+        </ul>
+      </li>
     </ul>
-</div>
-    
-  </section>
-    {/* NEW SECTION LIKE THE DEMO WEBSITE IMAGE */}
-<section className="about-forklift">
-  <div className="about-left">
-<img src={bgimage4} alt="Worker" className="main-worker" />
-<div className="small-lift-box">
-<img src={bgimage5} alt="Forklift Small" />
-</div>
-</div>
-<div className="about-right">
-<h1 className="tag">GET TO KNOW US</h1>
-<h1>Welcome to Forklift Rent and Services</h1>
-<p>
-We specialize in providing top‑notch solutions for all your forklift
-needs. With years of expertise in the industry, we understand the
-importance of efficiency, safety, and reliability in material handling
-operations.
-</p>
-<p className="bold-text">
-We have 20+ years of experience in forklift and forklift services.
-</p>
-<div className="call-box">
-<span className="call-icon">📞</span>
-<p>
-Have any question? Give us a call <br />
-<strong>+91 90334 76660</strong>
-</p>
-</div>
+  </div>
 
-</div>
+  <div className="home-right">
+      <img src={bgimage2} alt="forklift" className="bigs" />
+        <img src={bgimage3} alt="service" className="smalls" />
+  </div>
 </section>
-<br />
-    </div>
+      {/* SERVICE INTRO */}
+      <section className="service-intro">
+        <div className="service-container">
+          <div className="service-left">
+            <img src={bgimage4} alt="Big Forklift" className="big-forklift" />
+          </div>
 
+          <div className="service-right">
+            <h1>Providing Premier Forklift <strong>Sales, Services & Parts</strong></h1>
+            <ul>
+              <li>Daily, weekly, monthly rentals</li>
+              <li>New & reconditioned forklifts</li>
+              <li>Battery, charger & repair services</li>
+              <li>Diesel, LPG & electric repairs</li>
+              <li>Parts for all brands</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE US */}
+      <h2 className="section-title">Why Choose Us</h2>
+      <div className="features-grid">
+        <div className="feature-card"><h4>✔ Professional Team</h4><p>Skilled staff committed to quality.</p></div>
+        <div className="feature-card"><h4>✔ Fast Delivery</h4><p>Real-time tracking & quick dispatch.</p></div>
+        <div className="feature-card"><h4>✔ 24/7 Support</h4><p>Always ready to help.</p></div>
+        <div className="feature-card"><h4>✔ Safe & Secure</h4><p>Strict safety protocols.</p></div>
+      </div>
+      {/* GET TO KNOW US SECTION */}
+<section className="get-to-know">
+  <div className="get-left">
+    <img src={bgimage5} alt="Operator" className="big" />
+    <img src={bgimage6} alt="Forklift" className="small" />
+  </div>
+
+  <div className="get-right">
+    <h4>GET TO KNOW US</h4>
+    <h2>Welcome to Forklift Rent and Services</h2>
+    <p>
+      We specialize in providing top-notch solutions for all your forklift needs.
+      With years of expertise in the industry, we understand the importance of efficiency,
+      safety, and reliability in material handling operations.
+    </p>
+    <p><strong>We have 20+ years of experience in forklift and forklift services.</strong></p>
+
+    <div className="call-box">
+      📞 +91 90334 76660
+    </div>
+  </div>
+</section>
+
+    </div>
   );
 }
 
 export default Home;
 
+
+/* GLOBAL STYLES MUST BE ABOVE THE COMPONENT */
 const GlobalStyle = createGlobalStyle`
-.home-hero::before{
-content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url(${bgimage});
-  background-size: cover;
-  background-position: center;
-  filter: blur(3Px) brightness(80%);
-  z-index: 0;
-}
- 
-.home-hero {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-  padding-bottom: 40px;
-  color: #000000ff;
-  text-align:center;
-}
-.home-hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
- }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-.hero-inner {
-  position: relative;
-  z-index: 1;
-  max-width: 900px;
-  padding: 60px 40px;
-  background: rgba(211, 203, 203, 0.4);
-  border-radius: 20px;
-  backdrop-filter: blur(4px);
-  box-shadow: 0 4px 40px rgba(0,0,0,0.3);
-}
-.home-infor h3{
-text-align: center;
-  margin:0 0 10px;
-}
-  .home-infor h2{
-text-align: center;
-  margin:0 0 10px;
-}
-.home-infor .card-group {
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  /* ---------------- HERO SECTION ---------------- */
+  .home-hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url(${bgimage});
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px) brightness(80%);
+    z-index: 0;
+  }
+
+  .home-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    color: #000;
+    text-align: center;
+  }
+
+  .home-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    padding: 60px 40px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 40px rgba(0,0,0,0.3);
+  }
+
+  .hero-inner h1 { font-size: 3rem; font-weight: 700; }
+  .hero-inner h1 span { color: #12b2ec; }
+
+  .h_button button {
+    padding: 14px 26px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    background: #12b2ec;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  .h_button button:hover { background: #0a8bb8; }
+  .h_button button a { color: #fff; text-decoration: none; }
+
+/* ---------------- IMAGE LAYOUT ---------------- */
+.home-infor {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 40px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+.home-left { flex: 1; }
+.home-right {
+  position: relative;
 }
 
-.home-infor .card {
-  width: 320px;
-  background: #ffffff;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  transition: 0.3s ease;
-}
-
-.home-infor .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 35px rgba(0,0,0,0.20);
-}
-
-.home-infor img {
-  width: 100%;
-  height: 200px;
+.home-right img.bigs {
+  display: flex;
+  gap: 15px;
+  width: 420px;
+  height: 320px;
   object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
-.home-infor .card-body {
-  padding: 20px;
-  text-align: left;
-}
-.hero-inner h1 {
-  font-weight: 700;
-  font-size:60;
-  letter-spacing: -1px;
-}
-
-.hero-inner p {
-  line-height:2;
-}
-   .hero-inner h3{
-  text-align: center;
-  margin:0 0 10px;
-  vertical-align: text-top;  
-}
-.h_button button {
-  padding: 14px 26px;
-  font-size: 1.1rem;
-  border-radius: 30px;
-  background: #12b2ecff;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s ease;
+.home-right img.smalls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+  height: 200px; /* fixed typo: hight -> height */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  position: absolute; /* fixed typo: absoulte -> absolute */
+  bottom: -40px;
+  right: 300px; /* fixed typo: rigth -> right */
 }
 
-.h_button button:hover {
-  transform: translateY(-3px);
-  background: #12b2ecff;
+/* ---------------- SERVICE INTRO ---------------- */
+.service-intro {
+  padding: 60px 0;
+  background: #e3f2fd;
 }
-
-.h_button button a {
-  color: #000000ff;
-  text-decoration: none;
-}
-/* NEW ABOUT SECTION */
-.about-forklift {
-  width: 80%;
+.service-container {
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.service-left .big-forklift { width: 500px; border-radius: 8px; }
+.service-right { max-width: 600px; }
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px; /* Space between left and right */
+  padding: 20px;
+}
+
+.left-content {
+  flex: 1; /* takes up remaining space */
+  max-width: 600px;
+  text-align: left;
+  font-family: Arial, sans-serif;
+}
+
+.right-content {
+  flex: 1;
+  /* You can add styles for images or right content here */
+}
+
+
+/* ---------------- WHY CHOOSE US ---------------- */
+.features-grid {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+.feature-card {
+  background: #f7f7f7;
+  padding: 28px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s ease;
+  border: 1px solid #eee;
+  animation: fadeUp 1s ease-in-out;
+}
+.feature-card:hover { background: #111; color: #fff; }
+
+/* KEYFRAME ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* ---------------- GET TO KNOW US SECTION ---------------- */
+.get-to-know {
+  padding: 80px 0;
+  display: flex;
   align-items: center;
   gap: 50px;
-  text-align: center;
-}
-
-.main-worker {
-width: 380px;
-border-radius: 16px;
-
-}
-.about-left {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.small-lift-box {
-position: absolute;
-  bottom: -40px;
-  right: -40px;
-background: #ffffffff;
-padding: 10px;
-border-radius: 12px;
-box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-}
-
-.small-lift-box img {
-width: 160px;
-border-radius: 10px;
-
-}
-.about-right {
-  text-align: center;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-
-.about-right h1 {
-font-size: 2rem;
-font-weight: 700;
+.get-left {
+  position: relative;
 }
 
-.tag {
-color: #3949ab;
-font-weight: 600;
-margin-bottom: 10px;
-text-align: center; /* centered text */
- /* ensure block alignment */
-width: 100%; /* full width for perfect centering */
+.get-left img.big {
+  width: 420px;
+  height: 280px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
-.bold-text {
-font-weight: 700;
-margin: 15px 0;
+.get-left img.small {
+  width: 230px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  position: absolute;
+  bottom: -70px;
+  right: -30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  background: #fff;
+  padding: 5px;
+}
+
+.get-right h4 {
+  color: #12b2ec;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.get-right h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
 .call-box {
-display: flex;
-align-items: center;
-background: #e8ffe8;
-padding: 12px 20px;
-border-radius: 8px;
-margin: 10px 0;
+  margin-top: 20px;
+  background: #12b2ec;
+  padding: 18px 26px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  width: fit-content;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.call-icon {
-font-size: 2rem;
-color: #00b300;
+.call-box:hover {
+  background: #0a8bb8;
 }
 
-.explore-btn {
-padding: 12px 28px;
-border: none;
-background: #000;
-color: #fff;
-border-radius: 8px;
-cursor: pointer;
-font-weight: 600;
-transition: 0.3s;
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  .service-container, .home-infor { flex-direction: column; text-align: center; }
+  .big-img, .small-img { width: 90%; height: auto; }
 }
-
-.explore-btn:hover {
-background: #333;
-}
-
-/* NEW SERVICE   SECTION */
-/* DEMO STYLE SECTION */
-.service-intro {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 0;
-  width: 100%;
-  margin: 0 auto;
-  gap: 40px;
-  background: #4bc8f6ee; /* light peach background like demo */
-}
-
-.service-left img.big-forklift {
-  width: 500px;
-    bottom: -40px;
-  right: -40px;
-  border-radius: 8px;
-}
-
-.service-right {
-  max-width: 600px;
-}
-
-.service-right h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  line-height: 1.4;
-}
-
-.service-right ul {
-  text-align: left;
-  list-style-type: disc;
-  margin-left: 20px;
-  font-size: 1.1rem;
-  line-height: 1.8;
-}
-
-@media (max-width: 600px) {
-  .hero-inner {
-    padding: 30px 20px;
-    border-radius: 12px;
-  }
-
-  .home-info .card {
-    width: 90%;
-  }
-}
-  
 `;
