@@ -176,10 +176,8 @@ const Footer = () => {
           <div>
             <h3>Our Services</h3>
             <ul>
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">App Development</a></li>
-              <li><a href="#">UI/UX Designing</a></li>
-              <li><a href="#">Digital Marketing</a></li>
+              <li><a href="/Services/Fulfillment">Fulfillment</a></li>
+              <li><a href="/Services/Distribution">Distribution</a></li>
             </ul>
           </div>
 
@@ -201,7 +199,7 @@ const Footer = () => {
 
       {/* COPYRIGHT */}
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} TechStrota — All Rights Reserved</p>
+        <p>developed by © TechStrota — All Rights Reserved</p>
       </div>
     </footer>
   );

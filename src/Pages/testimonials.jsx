@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaStar } from "react-icons/fa";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -51,7 +51,7 @@ const GlobalStyle = createGlobalStyle`
 }
 `;
 
-const testimonials = [
+const defaultTestimonials = [
   {
     name: 'John',
     message: "Their services are amazing! 😊",
@@ -64,23 +64,34 @@ const testimonials = [
   },
   {
     name: 'Alice',
-    message:
-      "Really happy with Company! My package arrived on time and in perfect condition! 😊",
+    message: "Really happy with Company! My package arrived on time and in perfect condition! 😊",
     rating: 5,
   },
 ];
 
 const Testimonials = () => {
+  const [testimonialData, setTestimonialData] = useState([]);
+
+  useEffect(() => {
+    // Load saved feedback
+    const saved = JSON.parse(localStorage.getItem("testimonials")) || [];
+
+    // Merge: new feedback + default testimonials
+    const combined = [...saved, ...defaultTestimonials];
+
+    setTestimonialData(combined);
+  }, []);
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 600,
-    slidesToShow: 1,   // ✅ Show only one slide at a time
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2500,  // ✅ Time between slides
-    pauseOnHover: false,  // ✅ Keep autoplay even when hovered
-    arrows: false,        // Optional: Hide arrows for cleaner look
+    autoplaySpeed: 2500,
+    pauseOnHover: false,
+    arrows: false,
   };
 
   return (
@@ -88,8 +99,9 @@ const Testimonials = () => {
       <GlobalStyle />
       <div className="testimonials">
         <h2>Feedback From Real Customers</h2>
+
         <Slider {...settings}>
-          {testimonials.map((t, index) => (
+          {testimonialData.map((t, index) => (
             <div key={index} className="testimonial-card">
               <div className="stars">
                 {[...Array(5)].map((_, i) => (
@@ -99,6 +111,7 @@ const Testimonials = () => {
                   />
                 ))}
               </div>
+
               <p>"{t.message}"</p>
               <h4>- {t.name}</h4>
             </div>

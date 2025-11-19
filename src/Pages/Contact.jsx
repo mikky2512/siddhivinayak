@@ -57,7 +57,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 .left-form button:hover {
-  background: #3949ab;
+  background: #303f9f;
 }
 
 /* RIGHT: DETAILS */
@@ -81,7 +81,7 @@ const GlobalStyle = createGlobalStyle`
   color: #555;
 }
 
-/* SMALL MAP INSIDE DETAILS */
+/* SMALL MAP */
 .small-map {
   margin-top: 20px;
   width: 100%;
@@ -136,7 +136,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 .feedback-card button:hover {
-  background: #b45d53;
+  background: #303f9f;
 }
 
 /* RESPONSIVE */
@@ -150,9 +150,31 @@ const GlobalStyle = createGlobalStyle`
 const ContactPage = () => {
   const { register, handleSubmit, reset } = useForm();
 
-  const onSubmit = (data) => {
-    console.log("Form Submitted:", data);
+  // MAIN FORM — no testimonial saving
+  const onSubmitMain = (data) => {
+    console.log("Main Form Submitted:", data);
     alert("Thank you! Your request has been submitted.");
+    reset();
+  };
+
+  // FEEDBACK FORM — saves to testimonials localStorage
+  const onSubmitFeedback = (data) => {
+    console.log("Feedback Submitted:", data);
+
+    // Load old testimonials
+    const existing = JSON.parse(localStorage.getItem("testimonials")) || [];
+
+    // Create new testimonial object
+    const newFeedback = {
+      name: data.name || "Anonymous User",
+      message: data.feedback,
+      rating: 5,
+    };
+
+    // Save to localStorage
+    localStorage.setItem("testimonials", JSON.stringify([newFeedback, ...existing]));
+
+    alert("Thank you for your feedback!");
     reset();
   };
 
@@ -167,7 +189,7 @@ const ContactPage = () => {
         <div className="left-form">
           <h2>Submit Your Requirements</h2>
 
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmitMain)}>
             <input {...register("name", { required: true })} placeholder="Your Name" />
             <input {...register("phone", { required: true })} placeholder="Your Phone" />
             <input {...register("email", { required: true })} placeholder="Your Email" />
@@ -177,7 +199,7 @@ const ContactPage = () => {
           </form>
         </div>
 
-        {/* RIGHT SIDE DETAILS WITH MAP INSIDE */}
+        {/* RIGHT DETAILS */}
         <div className="right-details">
           <h3>Contact Us</h3>
           <p><strong>Name:</strong> Siddhivinayak</p>
@@ -192,7 +214,6 @@ const ContactPage = () => {
             Vadodara, Gujarat 390007
           </p>
 
-          {/* SMALL MAP INSIDE CONTACT DETAILS */}
           <div className="small-map">
             <iframe
               title="map"
@@ -201,7 +222,6 @@ const ContactPage = () => {
             ></iframe>
           </div>
         </div>
-
       </div>
 
       {/* FEEDBACK SECTION */}
@@ -209,7 +229,9 @@ const ContactPage = () => {
         <h2>Share Your Feedback</h2>
 
         <div className="feedback-card">
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmitFeedback)}>
+            <input {...register("name")} placeholder="Your Name (optional)" />
+
             <textarea
               {...register("feedback", { required: true })}
               placeholder="Write your feedback..."
@@ -219,6 +241,7 @@ const ContactPage = () => {
           </form>
         </div>
       </div>
+
     </div>
   );
 };
