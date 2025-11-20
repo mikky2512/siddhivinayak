@@ -155,9 +155,9 @@ const Footer = () => {
           </p>
 
           <div className="footer-socials">
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaYoutube /></a>
+            <a href="https://www.facebook.com/people/Tech-Strota/61550062532070/"><FaFacebookF /></a>
+            <a href="https://www.instagram.com/techstrota/"><FaInstagram /></a>
+            <a href="https://www.youtube.com/@techstrota"><FaYoutube /></a>
           </div>
         </div>
 
