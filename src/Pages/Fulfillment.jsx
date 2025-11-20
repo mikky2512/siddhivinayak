@@ -171,7 +171,7 @@ Increase speed, accuracy & scalability.`,
 
   return (
     <div className="fulfillment-wrapper">
-      <h2 className="section-title">Fulfillment Center Facilities</h2>
+      <h1 className="section-title">Fulfillment Center Facilities</h1>
 
       {/* Cards: overlay on hover + click for modal */}
       <motion.div

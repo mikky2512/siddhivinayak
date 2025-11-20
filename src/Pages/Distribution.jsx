@@ -85,7 +85,7 @@ const DistributionPages = () => {
 
       {/* FACILITIES TABLE */}
       <section className="table-section slide-up">
-        <h2><center>Distribution Center Facilities</center></h2>
+        <h1><center>Distribution Center Facilities</center></h1>
 
         <div className="table-responsive">
           <table className="styled-table">

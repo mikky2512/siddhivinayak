@@ -95,7 +95,7 @@ const GlobalStyle = createGlobalStyle`
 .features-grid {
   max-width: 1200px;
   margin: 40px auto;
-  padding: 20px;
+  padding: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
@@ -113,7 +113,7 @@ const GlobalStyle = createGlobalStyle`
 
 .feature-card:hover {
   transform: translateY(-10px);
-  background: #111;
+  background: #333D79;
   color: #fff;
 }
 

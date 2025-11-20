@@ -1,12 +1,13 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { createGlobalStyle } from "styled-components";
-
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 const GlobalStyle = createGlobalStyle`
 .contact-page {
   color: #333;
   font-family: "Poppins", sans-serif;
   padding: 40px 20px;
+  background-color: #FAEBEF;
 }
 
 /* GRID: Left Form | Right Details */
@@ -14,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 40px;
-  max-width: 1100px;
+  max-width: 1300px;
   margin: auto;
 }
 
@@ -29,7 +30,8 @@ const GlobalStyle = createGlobalStyle`
 .left-form h2 {
   text-align: center;
   margin-bottom: 25px;
-}
+  color: #333d79;
+  }
 
 .left-form form {
   display: flex;
@@ -39,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
 
 .left-form input,
 .left-form textarea {
-  width: 100%;
+  width: 95%;
   padding: 14px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -72,13 +74,34 @@ const GlobalStyle = createGlobalStyle`
 .right-details h3 {
   margin-bottom: 15px;
   font-size: 22px;
-  color: #222;
+  color: #333d79;
+  
 }
 
 .right-details p {
   margin-bottom: 10px;
   font-size: 15px;
   color: #555;
+}
+  /* SOCIAL ICONS */
+.footer-socials {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-socials a {
+  color: white;
+  font-size: 17px;
+  background: #333D79;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  background: #0a8bb8;
+  transform: translateY(-5px);
 }
 
 /* SMALL MAP */
@@ -106,6 +129,7 @@ const GlobalStyle = createGlobalStyle`
 .feedback-section h2 {
   text-align: center;
   margin-bottom: 20px;
+  color: #333d79
 }
 
 .feedback-card {
@@ -116,7 +140,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 .feedback-card textarea {
-  width: 100%;
+  width: 95%;
   height: 120px;
   padding: 14px;
   border: 1px solid #ccc;
@@ -216,6 +240,12 @@ const ContactPage = () => {
           <p><strong>Email:</strong> info@siddhivinayak.com</p>
           <p><strong>Call:</strong> +91 74330 77939</p>
           <p><strong>WhatsApp:</strong> +91 96620 74322</p>
+          <div className="footer-socials">
+                      <a href="#"><FaFacebookF /></a>
+                      <a href="#"><FaInstagram /></a>
+                      <a href="#"><FaYoutube /></a>
+                    </div>
+
 
           <h3>Address</h3>
           <p>

@@ -14,13 +14,14 @@ const GlobalStyle = createGlobalStyle`
 }
 
 .testimonials h2 {
+  margin-top: -5px;
   font-size: 28px;
   margin-bottom: 40px;
-  color: #222;
+  color: #333D79;
 }
 
 .testimonial-card {
-  background: #f9f9f9;
+  background: #FAEBEF;
   border-radius: 12px;
   padding: 25px;
   width: 300px;

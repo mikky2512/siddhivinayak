@@ -88,7 +88,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 .footer-center ul li a:hover {
-  color: #d27b6a;
+  color: #0a8bb8;
   transform: translateX(5px);
 }
 

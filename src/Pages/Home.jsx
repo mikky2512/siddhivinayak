@@ -185,20 +185,20 @@ const GlobalStyle = createGlobalStyle`
     z-index: 1;
     max-width: 900px;
     padding: 60px 40px;
-    background: rgba(255,255,255,0.9);
+    background: #FAEBEF;
     border-radius: 20px;
     backdrop-filter: blur(4px);
     box-shadow: 0 4px 40px rgba(0,0,0,0.3);
   }
 
   .hero-inner h1 { font-size: 3rem; font-weight: 700; }
-  .hero-inner h1 span { color: #12b2ec; }
+  .hero-inner h1 span { color: #333d79; }
 
   .h_button button {
     padding: 14px 26px;
     font-size: 1.1rem;
     border-radius: 30px;
-    background: #12b2ec;
+    background: #333D79;
     border: none;
     font-weight: 600;
     cursor: pointer;
@@ -249,7 +249,9 @@ const GlobalStyle = createGlobalStyle`
 /* ---------------- SERVICE INTRO ---------------- */
 .service-intro {
   padding: 60px 0;
-  background: #e3f2fd;
+  background: #333d79;
+  bottom-margin: 100px;
+  color: #fff;
 }
 .service-container {
   max-width: 1200px;
@@ -299,7 +301,7 @@ const GlobalStyle = createGlobalStyle`
   border: 1px solid #eee;
   animation: fadeUp 1s ease-in-out;
 }
-.feature-card:hover { background: #111; color: #fff; }
+.feature-card:hover { background: #333d79; color: #fff; }
 
 /* KEYFRAME ANIMATIONS */
 @keyframes fadeUp {
@@ -342,7 +344,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 .get-right h4 {
-  color: #12b2ec;
+  color: #333D79;
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 10px;
@@ -356,7 +358,7 @@ const GlobalStyle = createGlobalStyle`
 
 .call-box {
   margin-top: 20px;
-  background: #12b2ec;
+  background: #333d79;
   padding: 18px 26px;
   border-radius: 10px;
   color: white;
