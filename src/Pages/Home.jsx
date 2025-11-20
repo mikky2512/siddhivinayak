@@ -144,6 +144,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
+    background-color: #FAEBEF;
   }
 
   /* ---------------- HERO SECTION ---------------- */
@@ -206,6 +207,7 @@ const GlobalStyle = createGlobalStyle`
 
 /* ---------------- IMAGE LAYOUT ---------------- */ 
 .home-infor {
+background-color: #FAEBEF;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -265,6 +267,10 @@ const GlobalStyle = createGlobalStyle`
 .service-card .icon {
   font-size: 48px;
   margin-bottom: 15px;
+    display: flex;
+  justify-content: center;   /* centers icon */
+  align-items: center;
+  width: 100%; 
 }
 
 .service-card h3 {
