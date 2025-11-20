@@ -2,12 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 
+
 function Navbar() {
   return (
     <div>
     <header className="navbar">
          <GlobalStyle />
-        <img src="logo.png" alt="logo"></img>
+<img src={`${process.env.PUBLIC_URL}/logo.jpg`} alt="logo" />
+
       <nav className="nav-right">
         <ul>
           <li><Link to="/">Home</Link></li>
