@@ -2,7 +2,6 @@
   font-family: "Poppins", sans-serif;
   color: #222;
   background-color: #FAEBEF;
-
 }
 
 .distribution-page h1 {
@@ -18,54 +17,80 @@
   margin-bottom: 2rem;
 }
 
-/* Hero Section */
+/* ===========================
+   HERO SECTION (UPDATED)
+=========================== */
 .hero {
-  
-  color: rgb(236, 236, 238);
-  text-align: center;
-  padding: 10px 20px;
-  background-attachment: fixed;
+  margin-top: 0.5px;
   position: relative;
-  margin-top: 10px  ;
-}
-.hero-img-section{
-  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  height:50%;
+  
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 100px 0;
-  height: fit-content;
+  align-items: center;
 }
 
-.hero-img{
-  width: 100%;
-  max-width: 100px;
-  height: 30%;
-  object-fit: contain;
-}
+/* Blur overlay */
 .hero::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #333D79;
+  inset: 0;
+  
+  z-index: 1;
 }
 
-.hero h1, .hero p {
-  color: #ddd;
-  position: relative;
-  z-index: 1;
+.hero-img-section {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(6px) brightness(70%);
+  transform: scale(1.05);
 }
 
 .hero h1 {
   font-size: 3rem;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
+  font-weight: 700;
+  color: #fff;
+  z-index: 2;
 }
 
 .hero p {
   font-size: 1.2rem;
+  color: #f1f1f1;
+  z-index: 2;
+  margin-top: -20px;
 }
 
-/* Content Sections */
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    height: 40vh;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* ===========================
+   CONTENT SECTIONS
+=========================== */
+
 .section {
   display: flex;
   align-items: center;
@@ -130,101 +155,92 @@
   color: #333D79;
 }
 
-.table-responsive 
-{
-.styled-table {
-margin-bottom: 80px;
-width: 100%;
-border-collapse: collapse;
-background: white;
-border-radius: 12px;
-overflow: hidden;
+/* ===========================
+   TABLE
+=========================== */
+
+.table-responsive {
+  width: 100%;
 }
 
+.styled-table {
+  margin-bottom: 80px;
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
 
 .styled-table thead {
-background: #333D79;
-color: white;
+  background: #333D79;
+  color: white;
 }
-
 
 .styled-table th,
 .styled-table td {
-padding: 14px;
-text-align: left;
-border-bottom: 1px solid #ddd;
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
-
 
 .styled-table tbody tr:nth-child(even) {
-background: #f2f7ff;
+  background: #f2f7ff;
 }
-
 
 .styled-table tbody tr:hover {
-background: #e8f0ff;
-transition: 0.3s;
+  background: #e8f0ff;
+  transition: 0.3s;
 }
 
+/* ===========================
+   RESPONSIVE
+=========================== */
 
-
-.back-btn {
-  text-decoration: none;
-  color: #333D79;
-  border: 1px solid #333D79;
-  padding: 0.8rem 1.2rem;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.back-btn:hover {
-  background-color: #333D79;
-  color: #fff;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
+  .hero-img-section {
+    height: 40vh;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    top: 25%;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    top: 45%;
+  }
+
   .distribution-page h1 {
     font-size: 1.6rem;
   }
+
   .distribution-page p {
     font-size: 1rem;
   }
+
+  .styled-table th,
+  .styled-table td {
+    font-size: 14px;
+  }
 }
 
+/* Animations */
 .fade-in {
-animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
 }
-
 
 .slide-up {
-animation: slideUp 1s ease-in-out;
+  animation: slideUp 1s ease-in-out;
 }
-
 
 @keyframes fadeIn {
-from { opacity: 0; }
-to { opacity: 1; }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
-
 
 @keyframes slideUp {
-from { transform: translateY(40px); opacity: 0; }
-to { transform: translateY(0); opacity: 1; }
-}
-
-
-@media (max-width: 768px)
- {
-  .hero{height: 50vh;}
-.hero-section h1 { font-size: 30px; }
-.hero-section p { font-size: 16px; }
-
-
-.styled-table th,
-.styled-table td {
-font-size: 14px;
-}
-}
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }

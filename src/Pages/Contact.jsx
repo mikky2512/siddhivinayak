@@ -94,7 +94,7 @@ const GlobalStyle = createGlobalStyle`
   font-size: 17px;
   background: #333D79;
   padding: 10px;
-  border-radius: 50%;
+  border-radius: 50%; 
   display: flex;
   transition: 0.3s;
 }
