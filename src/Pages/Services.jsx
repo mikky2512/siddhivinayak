@@ -1,8 +1,9 @@
-// Services.jsx (Updated with 4 Cards + Responsive + Animation)
+// Services.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../Styles/Services.css";
+
 import S1 from "./Images/S1.jpg";
 import S2 from "./Images/S2.jpg";
 import S3 from "./Images/S3.jpg";
@@ -12,8 +13,7 @@ import S6 from "./Images/S6.jpg";
 import S7 from "./Images/S7.jpg";
 import S8 from "./Images/S8.jpg";
 import S9 from "./Images/S9.jpg";
-
-
+import HeroImg from "./Images/S.jpg";   // ⭐ Add your hero image
 
 
 const fadeUp = {
@@ -26,9 +26,25 @@ const Services = () => {
   return (
     <div className="services-page">
 
-      {/* HERO SECTION */}
+      {/* ⭐ HERO SECTION WITH IMAGE + ANIMATION */}
       <section className="hero">
-        <h1> Services</h1>
+
+        <motion.img
+          src={HeroImg}
+          alt="Warehousing"
+          className="hero-img"
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+        />
+
+        <motion.h1
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
+          Services
+        </motion.h1>
       </section>
 
       {/* 1️⃣ Dedicated Warehousing */}
@@ -44,7 +60,7 @@ const Services = () => {
         </div>
 
         <div className="text">
-          <h2>Dedicated Warehousing</h2>
+          <h1>Dedicated Warehousing</h1>
           <p>
             A solution for customers needing exclusive storage and value-added warehouse
             services with skilled manpower, advanced equipment, and WMS support.
@@ -52,7 +68,7 @@ const Services = () => {
         </div>
       </motion.section>
 
-      {/* ⭐ 2️⃣ NEW CARD (Between Dedicated & Multi-User) */}
+      {/* ⭐ 2️⃣ NEW CARD */}
       <motion.section
         className="service-section reverse"
         initial="initial"
@@ -65,10 +81,10 @@ const Services = () => {
         </div>
 
         <div className="text">
-          <h2>Inventory Management</h2>
+          <h1>Inventory Management</h1>
           <p>
             Real-time stock visibility, automated reports, stock accuracy processes, and 
-            cycle counting with advanced WMS support for smooth warehouse operations.
+            cycle counting with WMS support.
           </p>
         </div>
       </motion.section>
@@ -86,7 +102,7 @@ const Services = () => {
         </div>
 
         <div className="text">
-          <h2>Multi-User Facilities</h2>
+          <h1>Multi-User Facilities</h1>
           <p>
             Shared and scalable warehousing solutions that reduce distribution costs 
             and increase operational efficiency.
@@ -99,27 +115,11 @@ const Services = () => {
         <h2 className="center-title">Warehouse Services</h2>
 
         <div className="services-container">
-          {[
-            {
-              img: S4,
-              title: "Storage Optimization",
-              desc: "Maximized racking, pallet organization, and optimized warehouse flow.",
-            },
-            {
-              img: S5,
-              title: "Material Handling",
-              desc: "Safe and efficient movement of goods using modern equipment.",
-            },
-            {
-              img: S6,
-              title: "Quality Checks",
-              desc: "Inspection and QC procedures for inbound and outbound shipments.",
-            },
-            {
-              img: S7,
-              title: "Warehouse Security",
-              desc: "24/7 CCTV monitoring, controlled access & secure storage zones.",
-            },
+          {[ 
+            { img: S4, title: "Storage Optimization", desc: "Maximized racking and optimized warehouse flow." },
+            { img: S5, title: "Material Handling", desc: "Safe and efficient movement of goods with modern equipment." },
+            { img: S6, title: "Quality Checks", desc: "Inspection procedures for inbound & outbound shipments." },
+            { img: S7, title: "Warehouse Security", desc: "24/7 CCTV, access control and secure zones." },
           ].map((card, index) => (
             <motion.div
               key={index}
@@ -141,6 +141,7 @@ const Services = () => {
       <h2 className="center-title">Two Main Centers</h2>
 
       <section className="services-container">
+        
         <motion.div
           className="service-card"
           initial={{ opacity: 0, y: 50 }}
@@ -150,8 +151,7 @@ const Services = () => {
         >
           <img src={S8} alt="Fulfillment" />
           <h2>Fulfillment Centers</h2>
-          <p>Fast and cost-effective storage, sortation, and order fulfillment.</p>
-
+          <p>Fast and cost-effective storage, sortation and fulfillment.</p>
           <Link to="/Services/Fulfillment" className="learn-more-btn">
             Learn More →
           </Link>
@@ -166,8 +166,7 @@ const Services = () => {
         >
           <img src={S9} alt="Distribution" />
           <h2>Distribution Centers</h2>
-          <p>Efficient inventory movement and streamlined dispatches.</p>
-
+          <p>Efficient inventory movement and smooth dispatch.</p>
           <Link to="/Services/Distribution" className="learn-more-btn">
             Learn More →
           </Link>

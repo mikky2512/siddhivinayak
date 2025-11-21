@@ -10,6 +10,7 @@ import Services from "./Pages/Services";
 import "./App.css";
 import Fulfillment from "./Pages/Fulfillment";
 import Distribution from "./Pages/Distribution";
+import Blogs from "./Pages/Blogs";
 function App() {
   return (
     <div className="app">
@@ -25,6 +26,8 @@ function App() {
             <Route path="/testimonials" element={<testimonials />}/>
             <Route path="/services/fulfillment" element={<Fulfillment />} />
            <Route path="/services/distribution" element={<Distribution />} />
+           <Route path="/blogs" element={<Blogs />}/>
+
           </Routes>
         </main>
 
