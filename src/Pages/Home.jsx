@@ -42,12 +42,12 @@ function Home() {
       <div className="service-card">
         <span className="icon">🧾</span>
         <h3>Inventory Management</h3>
-        <p>Real-time tracking, RFID monitoring, FIFO/LIFO systems.</p>
+        <p>Real-time tracking, RFID monitoring,FIFO/LIFO systems.<br/>  Barcode and RFID-based item monitoring FIFO/LIFO inventory methods</p>
       </div>
       <div className="service-card">
         <span className="icon">🚚</span>
         <h3>Loading & Unloading</h3>
-        <p>Forklifts, pallets, conveyors & expert handling.</p>
+        <p>Forklifts, pallets, conveyors & expert handling. Modern equipment such as forklifts, pallets & conveyors Safe and quick transfer of goods</p>
       </div>
     </div>
 
@@ -61,12 +61,12 @@ function Home() {
       <div className="service-card">
         <span className="icon">📦</span>
         <h3>Packaging & Labeling</h3>
-        <p>Secure packaging with custom barcoding solutions.</p>
+        <p>Secure packaging with custom barcoding solutions. Custom labeling & barcoding solutions Damage prevention and quality assurance</p>
       </div>
       <div className="service-card">
         <span className="icon">🚀</span>
         <h3>Fast Dispatch</h3>
-        <p>Fleet management & route optimization.</p>
+        <p>Fleet management & route optimization. Fleet management and delivery support Route optimization for faster delivery</p>
       </div>
     </div>
 
@@ -274,15 +274,17 @@ background-color: #FAEBEF;
 }
 
 .service-card h3 {
+ text-align: center;
   font-size: 22px;
   margin-bottom: 10px;
-  color: #262626;
+  color: #333D79;
 }
 
 .service-card p {
+text-align: center;
   font-size: 17px;
   line-height: 1.6;
-  color: #555;
+  color: #131313ff;
 }
 
 
