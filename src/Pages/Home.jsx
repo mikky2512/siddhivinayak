@@ -300,44 +300,6 @@ background-color: #FAEBEF;
   transform: scale(1.05);
 }
 
-
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 1100px) {
-
-  .cards-image-wrapper {
-    flex-direction: column;
-  }
-
-  .card-column {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  .service-card {
-    width: 90%;
-  }
-
-  .center-image img {
-    width: 90%;
-    height: auto;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .card-column {
-    flex-direction: column;
-  }
-
-  .service-card, 
-  .center-image img {
-    width: 100%;
-    height: auto;
-  }
-}
-
 /* ---------------- SERVICE INTRO ---------------- */
 .service-intro {
   padding: 60px 0;
@@ -428,8 +390,8 @@ background-color: #FAEBEF;
   border-radius: 12px;
   object-fit: cover;
   position: absolute;
-  bottom: -70px;
-  right: -30px;
+  bottom: -50px;
+  right: -20px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   background: #fff;
   padding: 5px;
@@ -463,10 +425,72 @@ background-color: #FAEBEF;
 .call-box:hover {
   background: #0a8bb8;
 }
+/* 📱📲 FINAL PROFESSIONAL RESPONSIVE SETTINGS */
 
-/* ---------------- RESPONSIVE ---------------- */
-@media (max-width: 768px) {
-  .service-container, .home-infor { flex-direction: column; text-align: center; }
-  .big-img, .small-img { width: 90%; height: auto; }
+/* 🔹 Large Laptop / Desktop (1440px–1920px) */
+@media (max-width: 1440px) {
+  .hero-inner { max-width: 70%; }
+  .service-card { width: 330px; }
+  .center-image img { width: 350px; height: 290px; }
 }
+
+/* 💻 Standard Laptop – like Lenovo, Dell, HP */
+@media (max-width: 1366px) {
+  .hero-inner { max-width: 75%; }
+  .service-card { width: 320px; }
+}
+
+/* 📲 Tablet (Landscape) – iPad Pro / Surface Pro */
+@media (max-width: 1024px) {
+  .get-to-know,
+  .service-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .service-left .big-forklift { width: 85%; }
+  .get-left img.big { width: 90%; height: auto; }
+  .get-left img.small { position: static; margin-top: 15px; }
+  .center-image img { width: 85%; }
+}
+
+/* 📱 Tablet (Portrait) – iPad Mini / iPad Air */
+@media (max-width: 820px) {
+  .hero-inner { max-width: 85%; padding: 40px 20px; }
+  .hero-inner h1 { font-size: 2rem; }
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+  .cards-image-wrapper,
+  .get-to-know { flex-direction: column; }
+}
+
+/* 📱 Large Phones – iPhone 14, Pixel 7, Samsung A51 */
+@media (max-width: 600px) {
+  .hero-inner h1 { font-size: 1.7rem; }
+  .service-card { width: 100%; }
+  .center-image img { width: 100%; height: auto; }
+  .get-left img.small { width: 200px; height: 150px; }
+}
+
+/* 📱 iPhone XR / Samsung S22 / Pixel 6 */
+@media (max-width: 480px) {
+  .home-infor h2 { font-size: 30px; }
+  .hero-inner h1 { font-size: 1.5rem; }
+  .h_button button { padding: 10px 16px; }
+  .service-card p { font-size: 15px; }
+  .get-right h2 { font-size: 1.5rem; }
+}
+
+/* 📱 Small Phones – iPhone SE / Galaxy A10 / Older phones */
+@media (max-width: 390px) {
+  .hero-inner { padding: 20px; }
+  .hero-inner h1 { font-size: 1.3rem; }
+  .service-card p { font-size: 14px; }
+  .get-right h4 { font-size: 0.9rem; }
+}
+
+/* 📱 Galaxy Fold Mode / Surface Duo */
+@media (max-width: 360px) {
+  .hero-inner h1 { font-size: 1.1rem; }
+  .h_button button { padding: 6px 12px; font-size: 0.8rem; }
+}
+
 `;
