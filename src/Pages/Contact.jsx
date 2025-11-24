@@ -241,9 +241,9 @@ const ContactPage = () => {
           <p><strong>Call:</strong> +91 74330 77939</p>
           <p><strong>WhatsApp:</strong> +91 96620 74322</p>
           <div className="footer-socials">
-                      <a href="#"><FaFacebookF /></a>
-                      <a href="#"><FaInstagram /></a>
-                      <a href="#"><FaYoutube /></a>
+                      <a href="https://www.facebook.com/people/Tech-Strota/61550062532070/"><FaFacebookF /></a>
+                      <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Ftechstrota%2F&is_from_rle"><FaInstagram /></a>
+                      <a href="https://www.youtube.com/@techstrota"><FaYoutube /></a>
                     </div>
 
 
