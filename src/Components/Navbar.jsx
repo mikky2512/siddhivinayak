@@ -111,8 +111,8 @@ const GlobalStyle = createGlobalStyle`
   cursor: pointer;
 }
 /* ==================================
-      RESPONSIVE STYLES – ALL DEVICES
-================================== */
+   RESPONSIVE STYLES – ALL DEVICES
+   ================================== */
 
 /* 💻 Large Laptop & Desktop (1440px+) */
 @media (max-width: 1440px) {
@@ -132,12 +132,12 @@ const GlobalStyle = createGlobalStyle`
   .nav-right ul { gap: 20px; }
 }
 
-/* 📱 iPad Mini / iPad Air / Surface Pro */
+/* 📱 iPad Mini / Surface Pro */
 @media (max-width: 912px) {
   .nav-right ul { gap: 18px; }
 }
 
-/* 📱 Mobile (iPhone XR / S20 Ultra / Pixel 7 / Fold) */
+/* 📱 Mobile & Phones */
 @media (max-width: 768px) {
   .menu-btn { display: block; }
 
@@ -152,9 +152,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 20px 0;
   }
 
-  .nav-right.open {
-    display: flex;
-  }
+  .nav-right.open { display: flex; }
 
   .nav-right ul {
     flex-direction: column;
@@ -164,7 +162,7 @@ const GlobalStyle = createGlobalStyle`
   }
 }
 
-/* 📱 Small Phones (iPhone SE / Galaxy A51/71) */
+/* 📱 Small Phones (iPhone SE / Galaxy A51) */
 @media (max-width: 576px) {
   .navbar { padding: 10px 15px; }
   .navbar img { width: 120px; }
@@ -179,7 +177,6 @@ const GlobalStyle = createGlobalStyle`
   .menu-btn { font-size: 24px; }
 }
 
-/* 📱 Galaxy Fold / Very Small Screens */
 @media (max-width: 320px) {
   .navbar { padding: 8px 10px; }
   .navbar img { width: 90px; }
