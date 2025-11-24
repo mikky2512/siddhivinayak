@@ -154,7 +154,7 @@ const Footer = () => {
             creativity and commitment.
           </p>
 
-          <div className="footer-socials">
+          <div className="footer-socials">{/*SIDE MAP*/}
             <a href="https://www.facebook.com/people/Tech-Strota/61550062532070/"><FaFacebookF /></a>
             <a href="https://www.instagram.com/techstrota/"><FaInstagram /></a>
             <a href="https://www.youtube.com/@techstrota"><FaYoutube /></a>
