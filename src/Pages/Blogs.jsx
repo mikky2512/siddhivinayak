@@ -20,8 +20,8 @@ const BlogPage = () => {
   const [selected, setSelected] = useState(null);
 
   const blogs = [
-    { id: 1, title: "How Supply Chain is Evolving in 2025", img: B1, content: "Full blog content goes here..." },
-    { id: 2, title: "Why Last-Mile Delivery Matters", img: B2, content: "Full blog content goes here..." },
+    { id: 1, title: "How Supply Chain is Evolving in 2025", img: B1, content: "Full blog content goes here...." },
+    { id: 2, title: "Why Last-Mile Delivery Matters", img: B2, content: "Full blog content goes here...." },
     { id: 3, title: "Warehouse Automation Trends", img: B3, content: "Full blog content goes here..." },
     { id: 4, title: "How to Reduce Logistics Costs", img: B4, content: "Full blog content goes here..." },
     { id: 5, title: "Benefits of 3PL for Business", img: B5, content: "Full blog content goes here..." },
