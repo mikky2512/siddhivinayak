@@ -171,6 +171,7 @@ const Footer = () => {
               <li><a href="/about">About Us</a></li>
               <li><a href="/services">Services</a></li>
               <li><a href="/contact">Contact</a></li>
+              <li><a href="/blogs">Blogs</a></li>
             </ul>
           </div>
 
@@ -184,17 +185,19 @@ const Footer = () => {
 
         </div>
 
-        {/* RIGHT SECTION */}
+       {/* RIGHT SECTION */}
         <div className="footer-right">
-          <h3>Address</h3>
-          <p>
-            156, 1st Floor, C Tower, K10 Atlantis,<br />
-            Near Genda Circle, opp. Honest Restaurant,<br />
-            Vadodara, Gujarat 390007
-          </p>
-          <p>Email: info@techstrota.com</p>
-          <p>Phone: +91 98765 43210</p>
-        </div>
+           <h3>Address</h3>
+  
+             <p style={{ lineHeight: "1.6" }}>
+                 156, 1st Floor, C Tower, K10 Atlantis,<br />
+                 Near Genda Circle, opp. Honest Restaurant,<br />
+                Vadodara, Gujarat 390007
+             </p>
+
+  <p>Email: info@techstrota.com</p>
+  <p>Phone: +91 98765 43210</p>
+</div>
 
       </div>
 
