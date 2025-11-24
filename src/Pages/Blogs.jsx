@@ -40,7 +40,7 @@ const BlogPage = () => {
     <>
       <style>{`
         .blog-wrapper {
-          max-width: 1500px;
+          max-width: 2000px;
           margin: auto;
           padding: 40px 20px;
           font-family: Poppins, sans-serif;
