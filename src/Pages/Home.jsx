@@ -39,13 +39,13 @@ function Home() {
             <div className="service-card">
               <span className="icon">🧾</span>
               <h3>Inventory Management</h3>
-              <p>Real-time tracking, RFID monitoring, FIFO/LIFO systems.</p>
+              <p>Real-time tracking, RFID monitoring, FIFO/LIFO systems. Barcode and RFID-based item monitoring FIFO/LIFO inventory methods</p>
             </div>
 
             <div className="service-card">
               <span className="icon">🚚</span>
               <h3>Loading & Unloading</h3>
-              <p>Forklifts, pallets, conveyors & expert handling.</p>
+              <p>Forklifts, pallets, conveyors & expert handling. Modern equipment such as forklifts, pallets & conveyors Safe and quick transfer of goods</p>
             </div>
           </div>
 
@@ -57,13 +57,13 @@ function Home() {
             <div className="service-card">
               <span className="icon">📦</span>
               <h3>Packaging & Labeling</h3>
-              <p>Secure packaging with custom barcoding solutions.</p>
+              <p>Secure packaging with custom barcoding solutions. Damage prevention and quality assurance</p>
             </div>
 
             <div className="service-card">
               <span className="icon">🚀</span>
               <h3>Fast Dispatch</h3>
-              <p>Fleet management & route optimization.</p>
+              <p>Fleet management & route optimization. Same-day or scheduled shipping</p>
             </div>
           </div>
         </div>
@@ -115,10 +115,11 @@ function Home() {
           </p>
 
           <p><strong>We have 20+ years of experience in forklift and forklift services.</strong></p>
-
+          <a href="tel:+919033476660" style={{ textDecoration: "none" }} alt="call">
           <div className="call-box">
             📞 +91 90334 76660
           </div>
+          </a>
         </div>
       </section>
     </div>
@@ -134,7 +135,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #222222ff;
     background-color: #FAEBEF;
   }
 
@@ -279,7 +280,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .service-card h3 { font-size: 22px; margin-bottom: 10px; }
-  .service-card p { font-size: 17px; color: #555; line-height: 1.6; }
+  .service-card p { font-size: 17px; color: #030303ff; line-height: 1.6; }
 
   .center-image img {
     width: 400px;
