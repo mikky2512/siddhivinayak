@@ -1,22 +1,13 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-/* ANIMATION SETTINGS */
 .footer {
   background: #333D79;
   color: #fff;
   padding: 60px 20px 20px;
   font-family: "Poppins", sans-serif;
-  opacity: 0;
-  transform: translateY(80px) scale(0.9) rotateX(25deg);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.footer.show {
-  opacity: 1;
-  transform: translateY(0) scale(1) rotateX(0deg);
 }
 
 /* GRID: LEFT | CENTER | RIGHT */
@@ -84,27 +75,8 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Footer = () => {
-  const footerRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          } else {
-            entry.target.classList.remove("show");
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    if (footerRef.current) observer.observe(footerRef.current);
-  }, []);
-
   return (
-    <footer ref={footerRef} className="footer">
+    <footer className="footer">
       <GlobalStyle />
 
       <div className="footer-container">
