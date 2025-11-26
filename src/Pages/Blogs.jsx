@@ -439,7 +439,7 @@ modern solutions will benefit from faster delivery, lower costs, and improved gl
           width: 100%;
           max-width: 700px;
           display: block;
-          margin: 20px auto;
+          margin: 30px auto;
           border-radius: 10px;
         }
 
@@ -460,11 +460,12 @@ modern solutions will benefit from faster delivery, lower costs, and improved gl
           margin: auto;
           font-size: 1.15rem;
           line-height: 1.8;
-          text-align: center;
+          text-align: left;
         }
 
         .full-content h1 {
          text-align: center;
+         margin-bottom: 39px;
          color: #333D79
         }
 
@@ -485,6 +486,8 @@ modern solutions will benefit from faster delivery, lower costs, and improved gl
           font-size: 1.3rem;
           margin-top: 20px;
           display: inline-block;
+          display: block;
+          margin: 20px auto 0 auto;
         }
       `}</style>
 
