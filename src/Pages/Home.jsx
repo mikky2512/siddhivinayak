@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { createGlobalStyle } from "styled-components";
+
 import bgimage from "./Images/h1.jpg";
 import bgimage2 from "./Images/h2.jpg";
 import bgimage4 from "./Images/h4.jpg";
@@ -7,19 +10,23 @@ import bgimage5 from "./Images/h5.jpg";
 import bgimage6 from "./Images/h6.jpg";
 
 function Home() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });  // start AOS
+  }, []);
+
   return (
     <div className="home-info">
       <GlobalStyle />
 
       {/* HERO SECTION */}
-      <section className="home-hero">
+      <section className="home-hero" data-aos="zoom-in">
         <div className="hero-inner">
-          <h1>
+          <h1 data-aos="fade-up">
             Siddhivinayak Enterprise <br />
             <span>A Warehouse & Storage </span>
             <span>Company</span>
           </h1>
-          <div className="h_button">
+          <div className="h_button" data-aos="fade-up" data-aos-delay="200">
             <button><a href="/contact">Get in Touch</a></button>
           </div>
         </div>
@@ -27,69 +34,65 @@ function Home() {
 
       {/* IMAGE LAYOUT */}
       <section className="home-infor">
-        <h2>Our Warehouse Services</h2>
-        <p>
-          At Siddhivinayak Enterprise A Warehouse & Storage Company, we offer reliable and efficient warehouse services
-          designed to support your business operations. Whether you need short-term storage, long-term inventory solutions,
-          or complete logistics support, we provide safe, secure, and organized storage facilities to meet your needs.
+        <h2 data-aos="fade-up">Our Warehouse Services</h2>
+        <p data-aos="fade-up" data-aos-delay="200">
+          At Siddhivinayak Enterprise A Warehouse & Storage Company, we offer reliable and efficient warehouse
+          services designed to support your business operations.
         </p>
 
         <div className="cards-image-wrapper">
           <div className="card-column">
-            <div className="service-card">
+            <div className="service-card" data-aos="fade-right">
               <span className="icon">🧾</span>
               <h3>Inventory Management</h3>
-              <p>Real-time tracking, RFID monitoring, FIFO/LIFO systems. Barcode and RFID-based item monitoring FIFO/LIFO inventory methods</p>
+              <p>Real-time tracking, RFID monitoring, FIFO/LIFO systems.</p>
             </div>
 
-            <div className="service-card">
+            <div className="service-card" data-aos="fade-right" data-aos-delay="300">
               <span className="icon">🚚</span>
               <h3>Loading & Unloading</h3>
-              <p>Forklifts, pallets, conveyors & expert handling. Modern equipment such as forklifts, pallets & conveyors Safe and quick transfer of goods</p>
+              <p>Modern equipment such as forklifts & conveyors.</p>
             </div>
           </div>
 
-          <div className="center-image">
+          <div className="center-image" data-aos="zoom-in">
             <img src={bgimage2} alt="Warehouse" />
           </div>
 
           <div className="card-column">
-            <div className="service-card">
+            <div className="service-card" data-aos="fade-left">
               <span className="icon">📦</span>
               <h3>Packaging & Labeling</h3>
-              <p>Secure packaging with custom barcoding solutions. Damage prevention and quality assurance</p>
+              <p>Secure packaging with barcoding solutions.</p>
             </div>
 
-            <div className="service-card">
+            <div className="service-card" data-aos="fade-left" data-aos-delay="300">
               <span className="icon">🚀</span>
               <h3>Fast Dispatch</h3>
-              <p>Fleet management & route optimization. Same-day or scheduled shipping</p>
+              <p>Fleet management & route optimization.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* SERVICE INTRO */}
-      <section className="service-intro">
+      <section className="service-intro" data-aos="fade-up">
         <div className="service-container">
-          <div className="service-left">
+          <div className="service-left" data-aos="fade-right">
             <img src={bgimage4} alt="Big Forklift" className="big-forklift" />
           </div>
 
-          <div className="service-right">
+          <div className="service-right" data-aos="fade-left">
             <h1>Providing Premier Forklift <strong>Sales, Services & Parts</strong></h1>
             <ul>
-              <li>Daily, weekly, monthly rentals</li>
-              <li>New & reconditioned forklifts</li>
-              <li>Battery, charger & repair services</li>
-              <li>Diesel, LPG & electric repairs</li>
-              <li>Parts for all brands</li>
+              <li>Daily / weekly rentals</li>
+              <li>Reconditioned forklifts</li>
+              <li>Battery & repair services</li>
             </ul>
           </div>
         </div>
       </section>
-
-      {/* WHY CHOOSE US */}
+            {/* WHY CHOOSE US */}
       <h2 className="section-title">Why Choose Us</h2>
       <div className="features-grid">
         <div className="feature-card"><h4>✔ Professional Team</h4><p>Skilled staff committed to quality.</p></div>
@@ -99,26 +102,20 @@ function Home() {
       </div>
 
       {/* GET TO KNOW US */}
-      <section className="get-to-know">
-        <div className="get-left">
+      <section className="get-to-know" data-aos="fade-up">
+        <div className="get-left" data-aos="fade-right">
           <img src={bgimage5} alt="Operator" className="big" />
           <img src={bgimage6} alt="Forklift" className="small" />
         </div>
 
-        <div className="get-right">
+        <div className="get-right" data-aos="fade-left">
           <h4>GET TO KNOW US</h4>
           <h2>Welcome to Forklift Rent and Services</h2>
-          <p>
-            We specialize in providing top-notch solutions for all your forklift needs.
-            With years of expertise in the industry, we understand the importance of efficiency,
-            safety, and reliability in material handling operations.
-          </p>
+          <p>We specialize in providing top-notch solutions for all your forklift needs.</p>
+          <p><strong>20+ years of experience in forklift services.</strong></p>
 
-          <p><strong>We have 20+ years of experience in forklift and forklift services.</strong></p>
-          <a href="tel:+919033476660" style={{ textDecoration: "none" }} alt="call">
-          <div className="call-box">
-            📞 +91 90334 76660
-          </div>
+          <a href="tel:+919033476660" style={{ textDecoration: "none" }}>
+            <div className="call-box">📞 +91 90334 76660</div>
           </a>
         </div>
       </section>
@@ -147,11 +144,11 @@ const GlobalStyle = createGlobalStyle`
     background-image: url(${bgimage});
     background-size: cover;
     background-position: center;
-    filter: blur(3px) brightness(80%);
+    filter: blur(4px) brightness(80%);
     z-index: 0;
 
     /* ⭐ HERO BACKGROUND ZOOM ANIMATION */
-    animation: zoomHero 3s ease-in-out forwards;  
+   animation: zoomHero 3s ease-in-out forwards;  
   }
 
   @keyframes zoomHero {
@@ -275,15 +272,13 @@ const GlobalStyle = createGlobalStyle`
   animation-fill-mode: both;
   border-radius: 14px;
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-  border-radius: 14px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 360px;
-  background: #fff;
-  padding: 30px 25px;
-  text-align: left;
-  border: 1px solid #e6d9ff;
-  opacity: 0;
+    width: 360px;
+    background: #fff;
+    padding: 30px 25px;
+    text-align: left;
+    border: 1px solid #e6d9ff;
+     opacity: 0;
   animation: fadeUp 0.8s ease forwards; /* forwards is good */
   animation-fill-mode: both;
   }
@@ -433,7 +428,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   /* ---------------- GET TO KNOW US ---------------- */
-    /* ---------------- ANIMATION ---------------- */
+
+  /* ---------------- ANIMATION ---------------- */
 @keyframes fadeSlideLeft {
   0% { opacity: 0; transform: translateX(-50px); }
   100% { opacity: 1; transform: translateX(0); }
@@ -449,6 +445,7 @@ const GlobalStyle = createGlobalStyle`
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0px); }
 }
+
 
   .get-to-know {
     padding: 80px 0;
@@ -547,12 +544,33 @@ const GlobalStyle = createGlobalStyle`
     .cards-image-wrapper,
     .get-to-know { flex-direction: column; }
   }
+@media (max-width: 768px) {
+  .service-container {
+    flex-direction: column;
+    text-align: center;
+  }
 
+  .service-left .big-forklift {
+    width: 100%;
+  }
+
+  .service-right {
+    animation-delay: 0.2s;
+  }
+}
+@media (max-width: 500px) {
+  section {
+    padding: 20px 12px;  /* universal spacing for mobile */
+  }
+}
   @media (max-width: 600px) {
+  .home-hero {height: 80vh; padding-top: 50px; }
     .hero-inner h1 { font-size: 1.7rem; }
     .service-card { width: 100%; }
     .center-image img { width: 100%; height: auto; }
     .get-left img.small { width: 200px; height: 150px; }
+    .get-to-know { flex-direction: column; width: 100%; text-align: center; padding: 40px 10px; }
+  .get-right { width: 100%; }
   }
 
   @media (max-width: 480px) {
