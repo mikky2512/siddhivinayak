@@ -20,27 +20,27 @@ function Navbar() {
       <nav className={`nav-right ${isOpen ? "open" : ""}`}>
         <ul>
           <li>
-            <Link to="/" className={location.pathname === "/" ? "active" : ""}>
+            <Link to="/" className={location.pathname === "/" ? "active" : ""} onClick={() => setIsOpen(false)}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/blogs" className={location.pathname === "/blogs" ? "active" : ""}>
+            <Link to="/blogs" className={location.pathname === "/blogs" ? "active" : ""} onClick={() => setIsOpen(false)}>
               Blogs
             </Link>
           </li>
           <li>
-            <Link to="/services" className={location.pathname === "/services" ? "active" : ""}>
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className={location.pathname === "/about" ? "active" : ""}>
+            <Link to="/about" className={location.pathname === "/about" ? "active" : ""} onClick={() => setIsOpen(false)}>
               About
             </Link>
           </li>
           <li>
-            <Link to="/contact" className={location.pathname === "/contact" ? "active" : ""}>
+            <Link to="/services" className={location.pathname === "/services" ? "active" : ""} onClick={() => setIsOpen(false)}>
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className={location.pathname === "/contact" ? "active" : ""} onClick={() => setIsOpen(false)}>
               Contact
             </Link>
           </li>
