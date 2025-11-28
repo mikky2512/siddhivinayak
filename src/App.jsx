@@ -11,7 +11,7 @@ import "./App.css";
 import Fulfillment from "./Pages/Fulfillment";
 import Distribution from "./Pages/Distribution";
 import Blogs from "./Pages/Blogs";
-import ScrollToTop from "./Components/ScrollToTop";   // ✅ Added
+import ScrollToTop from "./Components/ScrollToTop"; 
 
 function App() {
   return (
