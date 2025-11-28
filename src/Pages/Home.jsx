@@ -133,10 +133,10 @@ const GlobalStyle = createGlobalStyle`
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: #222222ff;
-    background-color: #FAEBEF;
+    background: #fafafa;
+    color: #333;
   }
 
   /* ---------------- HERO SECTION ---------------- */
@@ -151,7 +151,7 @@ const GlobalStyle = createGlobalStyle`
     z-index: 0;
 
     /* ⭐ HERO BACKGROUND ZOOM ANIMATION */
-    animation: zoomHero 12s ease-in-out infinite alternate;
+    animation: zoomHero 3s ease-in-out forwards;  
   }
 
   @keyframes zoomHero {
@@ -196,7 +196,10 @@ const GlobalStyle = createGlobalStyle`
     to { opacity: 1; transform: translateY(0); }
   }
 
-  .hero-inner h1 { font-size: 3rem; font-weight: 700; }
+  .hero-inner h1 {
+  font-weight: 700;
+  line-height: 1.4;
+  }
   .hero-inner h1 span { color: #333d79; }
 
   .h_button button {
@@ -237,8 +240,21 @@ const GlobalStyle = createGlobalStyle`
     color: #333D79;
     margin-bottom: -30px;
   }
+  /* Section Title */
+.section-title, h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 35px;
+  font-weight: 600;
+  color: #333D79;
+}
 
-  .home-infor p { font-size: 22px; }
+  .home-infor p { 
+  line-height: 1.8;
+  color: #555;
+  font-size: 1.05rem; 
+  }
 
   .cards-image-wrapper {
     display: flex;
@@ -255,22 +271,27 @@ const GlobalStyle = createGlobalStyle`
     gap: 25px;
   }
 
-  .service-card {
-    width: 360px;
-    background: #fff;
-    border-radius: 18px;
-    padding: 30px 25px;
-    text-align: left;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e6d9ff;
-    transition: 0.3s;
+  .service-card{
+  animation-fill-mode: both;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 360px;
+  background: #fff;
+  padding: 30px 25px;
+  text-align: left;
+  border: 1px solid #e6d9ff;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards; /* forwards is good */
+  animation-fill-mode: both;
   }
 
-  .service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  .service-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.15);
   }
-
   .service-card .icon {
     font-size: 48px;
     margin-bottom: 15px;
@@ -293,11 +314,49 @@ const GlobalStyle = createGlobalStyle`
 
   .center-image img:hover { transform: scale(1.05); }
 
+    /* ---------- ANIMATIONS ---------- */
+
+/* Fade-in & slide-up animation */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animate all cards and center image on load */
+.service-card,
+.center-image img {
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* Add delay to cards (staggered animation) */
+.service-card:nth-child(1) { animation-delay: 0.2s; }
+.service-card:nth-child(2) { animation-delay: 0.4s; }
+.service-card:nth-child(3) { animation-delay: 0.6s; }
+.service-card:nth-child(4) { animation-delay: 0.8s; }
+
+/* Hover animation improvement */
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+.center-image img:hover {
+  transform: scale(1.07);
+}
+
+
   /* ---------------- SERVICE INTRO ---------------- */
   .service-intro {
     padding: 60px 0;
     background: #333d79;
     color: #fff;
+    overflow: hidden; 
   }
 
   .service-container {
@@ -307,14 +366,45 @@ const GlobalStyle = createGlobalStyle`
     align-items: center;
     gap: 40px;
   }
+/* IMAGE ANIMATION */
+.service-left {
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;   /* FOR ANIMATION */
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
   .service-left .big-forklift {
     width: 500px;
     border-radius: 8px;
   }
+/* TEXT ANIMATION */
+.service-right {
+  max-width: 600px;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 0.3s;   /* delay for better effect */
+}
 
-  .service-right { max-width: 600px; }
-
+@keyframes slideRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
   /* ---------------- WHY CHOOSE US ---------------- */
   .features-grid {
     max-width: 1200px;
@@ -343,6 +433,23 @@ const GlobalStyle = createGlobalStyle`
   }
 
   /* ---------------- GET TO KNOW US ---------------- */
+    /* ---------------- ANIMATION ---------------- */
+@keyframes fadeSlideLeft {
+  0% { opacity: 0; transform: translateX(-50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeSlideRight {
+  0% { opacity: 0; transform: translateX(50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes floatImage {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
   .get-to-know {
     padding: 80px 0;
     display: flex;
@@ -350,6 +457,7 @@ const GlobalStyle = createGlobalStyle`
     gap: 50px;
     max-width: 1200px;
     margin: 0 auto;
+    animation: fadeSlideLeft 1s ease-in-out both;
   }
 
   .get-left { position: relative; }
@@ -360,6 +468,7 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 15px;
     object-fit: cover;
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+     animation: fadeSlideLeft 1.2s ease-in-out both;
   }
 
   .get-left img.small {
@@ -369,12 +478,15 @@ const GlobalStyle = createGlobalStyle`
     object-fit: cover;
     position: absolute;
     bottom: -50px;
-    right: -20px;
+    right: -40px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     background: #fff;
     padding: 5px;
+    animation: floatImage 3s ease-in-out infinite;
   }
-
+.get-right {
+  animation: fadeSlideRight 1s ease-in-out both;
+}
   .get-right h4 {
     color: #333D79;
     font-size: 1.2rem;
@@ -389,6 +501,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .call-box {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
     margin-top: 20px;
     background: #333d79;
     padding: 18px 26px;
