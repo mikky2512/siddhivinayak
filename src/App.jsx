@@ -11,10 +11,15 @@ import "./App.css";
 import Fulfillment from "./Pages/Fulfillment";
 import Distribution from "./Pages/Distribution";
 import Blogs from "./Pages/Blogs";
+import ScrollToTop from "./Components/ScrollToTop";   // ✅ Added
+
 function App() {
   return (
     <div className="app">
       <Router>
+
+        <ScrollToTop />   {/* ✅ Added here — correct location */}
+
         <Navbar />
         
         <main className="main-content">
@@ -25,9 +30,8 @@ function App() {
             <Route path="/services" element={<Services />}/>
             <Route path="/testimonials" element={<testimonials />}/>
             <Route path="/services/fulfillment" element={<Fulfillment />} />
-           <Route path="/services/distribution" element={<Distribution />} />
-           <Route path="/blogs" element={<Blogs />}/>
-
+            <Route path="/services/distribution" element={<Distribution />} />
+            <Route path="/blogs" element={<Blogs />}/>
           </Routes>
         </main>
 
