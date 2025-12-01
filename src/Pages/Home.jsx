@@ -3,7 +3,6 @@ import { createGlobalStyle } from "styled-components";
 import bgimage from "./Images/h1.jpg";
 import bgimage2 from "./Images/h2.jpg";
 import bgimage5 from "./Images/h5.jpg";
-import bgimage6 from "./Images/h6.jpg";
 
 // Infrastructure images
 import infra1 from "./Images/infra1.jpg";
@@ -82,7 +81,6 @@ function Home() {
       <section className="get-to-know">
         <div className="get-left">
           <img src={bgimage5} alt="Operator" className="big" />
-          <img src={bgimage6} alt="Forklift" className="small" />
         </div>
         <div className="get-right">
           <h3>GET TO KNOW US</h3>
@@ -270,18 +268,6 @@ const GlobalStyle = createGlobalStyle`
 .get-left img.big {
   width: 330px;
   border-radius: 12px;
-}
-
-.get-left img.small {
-  width: 180px;
-  border-radius: 12px;
-  position: absolute;
-  bottom: -18px;
-  left: 83%;
-  transform: translateX(-50%);
-  background: white;
-  padding: 6px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .get-right {
