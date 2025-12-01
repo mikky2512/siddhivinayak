@@ -5,6 +5,11 @@ import bgimage2 from "./Images/h2.jpg";
 import bgimage5 from "./Images/h5.jpg";
 import bgimage6 from "./Images/h6.jpg";
 
+// Infrastructure images
+import infra1 from "./Images/infra1.jpg";
+import infra2 from "./Images/infra2.jpg";
+import infra3 from "./Images/infra3.jpg";
+
 function Home() {
   return (
     <div className="home-info">
@@ -44,6 +49,26 @@ function Home() {
         </div>
       </section>
 
+      {/* INFRASTRUCTURE HIGHLIGHT */}
+      <h2 className="section-title">Our Infrastructure</h2>
+      <section className="infrastructure-section">
+        <div className="infra-card">
+          <img src={infra1} alt="Storage Facility" />
+          <h3>Modern Storage Facility</h3>
+          <p>High-tech warehouses equipped for optimal storage.</p>
+        </div>
+        <div className="infra-card">
+          <img src={infra2} alt="Forklift Equipment" />
+          <h3>Advanced Equipment</h3>
+          <p>State-of-the-art forklifts and handling tools.</p>
+        </div>
+        <div className="infra-card">
+          <img src={infra3} alt="Safety Systems" />
+          <h3>Safety Systems</h3>
+          <p>Ensuring safety with surveillance and automated controls.</p>
+        </div>
+      </section>
+
       {/* WHY CHOOSE US */}
       <h2 className="section-title">Why Choose Us</h2>
       <div className="features-grid">
@@ -76,18 +101,8 @@ function Home() {
 export default Home;
 
 const GlobalStyle = createGlobalStyle`
-  * { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-  }
-
-  body { 
-    font-family: 'Poppins', sans-serif; 
-    background: #FAEBEF; 
-    color: #333;
-    overflow-x: hidden; 
-  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Poppins', sans-serif; background: #FAEBEF; color: #333; overflow-x: hidden; }
 
   /* HERO */
   .home-hero {
@@ -132,10 +147,12 @@ const GlobalStyle = createGlobalStyle`
   .hero-inner h1 {
     font-size: 2.5rem;
     color: #333D79;
+    border-bottom: 1px solid #02020264;
+    padding: 20px;
   }
 
   .h_button button {
-    margin-top: 15px;
+    margin-top: 20px;
     padding: 12px 24px;
     font-size: 1.1rem;
     border-radius: 30px;
@@ -150,12 +167,7 @@ const GlobalStyle = createGlobalStyle`
   .h_button button a { color: #fff; text-decoration: none; }
 
   /* SECTIONS */
-  .section-title {
-    text-align: center;
-    font-size: 2.4rem;
-    margin: 60px 0 30px;
-    color: #333D79;
-  }
+  .section-title { text-align: center; font-size: 2.4rem; margin: 60px 0 30px; color: #333D79; }
 
   .home-infor {
     display: flex;
@@ -195,27 +207,7 @@ const GlobalStyle = createGlobalStyle`
   .service-card h3 { color: #333D79; margin-bottom:10px; }
   .service-card p { color: #333; line-height: 1.6; }
 
-  .center-image img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 15px;
-  }
-
-  .service-intro, .get-to-know {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    max-width: 1200px;
-    margin:auto;
-    padding: 60px 20px;
-  }
-
-  .service-left img.big, .get-left img.big { max-width:400px; width:100%; border-radius:12px; }
-  .get-left img.small { max-width:220px; width:100%; border-radius:12px; margin-top:15px; }
-
-  .service-right, .get-right { max-width:500px; }
+  .center-image img { width: 100%; max-width: 400px; border-radius: 15px; margin-top:25%; margin-bottom:25%; }
 
   .features-grid {
     display: grid;
@@ -252,16 +244,72 @@ const GlobalStyle = createGlobalStyle`
 
   .call-box:hover { background:#0a8bb8; }
 
+  /* GET TO KNOW US */
+  .get-to-know {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin:auto;
+    padding: 60px 20px;
+  }
+
+  .get-left img.big { max-width:400px; width:100%; border-radius:12px; }
+  .get-left img.small { max-width:220px; width:100%; border-radius:12px; margin-top:15px; }
+  .get-right { max-width:500px; }
+
+  /* INFRASTRUCTURE SECTION */
+  .infrastructure-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .infra-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 320px;
+    width: 100%;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+
+  .infra-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+  }
+
+  .infra-card h3 { color: #333D79; margin-bottom: 10px; }
+  .infra-card p { color: #333; line-height: 1.5; }
+
+  .infra-card:hover { transform: translateY(-8px); }
+
   /* RESPONSIVE */
   @media (max-width: 1024px) {
     .service-intro, .get-to-know { flex-direction: column; text-align:center; }
     .center-image img { max-width: 350px; }
+    .infrastructure-section { gap: 20px; }
+    .infra-card { max-width: 45%; }
   }
 
   @media (max-width: 820px) {
     .cards-image-wrapper { display:flex !important; flex-direction:column !important; align-items:center; gap:20px; }
     .features-grid { grid-template-columns:1fr 1fr; }
     .hero-inner h1 { font-size:2rem; }
+  }
+
+  @media (max-width: 768px) {
+    .infrastructure-section { flex-direction: column; align-items: center; }
+    .infra-card { max-width: 90%; }
   }
 
   @media (max-width: 600px) {
