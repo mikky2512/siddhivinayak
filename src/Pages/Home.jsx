@@ -1,24 +1,17 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { createGlobalStyle } from "styled-components";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import bgimage from "./Images/h1.jpg";
 import bgimage2 from "./Images/h2.jpg";
-import bgimage4 from "./Images/h4.jpg";
 import bgimage5 from "./Images/h5.jpg";
 import bgimage6 from "./Images/h6.jpg";
 
 function Home() {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
-
   return (
     <div className="home-info">
       <GlobalStyle />
 
       {/* HERO */}
-      <section className="home-hero" data-aos="zoom-in">
+      <section className="home-hero">
         <div className="hero-inner">
           <h1>
             Siddhivinayak Enterprise <br />
@@ -35,55 +28,38 @@ function Home() {
       <h2 className="section-title">Our Warehouse Services</h2>
       <section className="home-infor">
         <div className="cards-image-wrapper">
-          <div className="card-column" data-aos="fade-right">
+          <div className="card-column">
             <div className="service-card"><span className="icon">🧾</span><h3>Inventory Management</h3><p>Real-time tracking, RFID monitoring, FIFO/LIFO systems.</p></div>
             <div className="service-card"><span className="icon">🚚</span><h3>Loading & Unloading</h3><p>Forklifts, pallets, conveyors & expert handling.</p></div>
           </div>
 
-          <div className="center-image" data-aos="zoom-in">
+          <div className="center-image">
             <img src={bgimage2} alt="Warehouse" />
           </div>
 
-          <div className="card-column" data-aos="fade-left">
+          <div className="card-column">
             <div className="service-card"><span className="icon">📦</span><h3>Packaging & Labeling</h3><p>Secure packaging with custom barcoding solutions.</p></div>
             <div className="service-card"><span className="icon">🚀</span><h3>Fast Dispatch</h3><p>Fleet management & route optimization.</p></div>
           </div>
         </div>
       </section>
 
-      {/* SERVICE INTRO */}
-      <section className="service-intro">
-        <div className="service-left" data-aos="fade-right">
-          <img src={bgimage4} alt="Big Forklift" />
-        </div>
-        <div className="service-right" data-aos="fade-left">
-          <h1>Providing Premier Forklift <strong>Sales, Services & Parts</strong></h1>
-          <ul>
-            <li>Daily, weekly, monthly rentals</li>
-            <li>New & reconditioned forklifts</li>
-            <li>Battery, charger & repair services</li>
-            <li>Diesel, LPG & electric repairs</li>
-            <li>Parts for all brands</li>
-          </ul>
-        </div>
-      </section>
-
       {/* WHY CHOOSE US */}
       <h2 className="section-title">Why Choose Us</h2>
       <div className="features-grid">
-        <div className="feature-card" data-aos="zoom-in"><h4>✔ Professional Team</h4><p>Skilled staff committed to quality.</p></div>
-        <div className="feature-card" data-aos="zoom-in"><h4>✔ Fast Delivery</h4><p>Real-time tracking & quick dispatch.</p></div>
-        <div className="feature-card" data-aos="zoom-in"><h4>✔ 24/7 Support</h4><p>Always ready to help.</p></div>
-        <div className="feature-card" data-aos="zoom-in"><h4>✔ Safe & Secure</h4><p>Strict safety protocols.</p></div>
+        <div className="feature-card"><h4>✔ Professional Team</h4><p>Skilled staff committed to quality.</p></div>
+        <div className="feature-card"><h4>✔ Fast Delivery</h4><p>Real-time tracking & quick dispatch.</p></div>
+        <div className="feature-card"><h4>✔ 24/7 Support</h4><p>Always ready to help.</p></div>
+        <div className="feature-card"><h4>✔ Safe & Secure</h4><p>Strict safety protocols.</p></div>
       </div>
 
       {/* GET TO KNOW US */}
       <section className="get-to-know">
-        <div className="get-left" data-aos="fade-right">
+        <div className="get-left">
           <img src={bgimage5} alt="Operator" className="big" />
           <img src={bgimage6} alt="Forklift" className="small" />
         </div>
-        <div className="get-right" data-aos="fade-left">
+        <div className="get-right">
           <h4>GET TO KNOW US</h4>
           <h2>Welcome to Forklift Rent and Services</h2>
           <p>We specialize in providing top-notch solutions for all your forklift needs. Efficiency, safety, and reliability are our priorities.</p>
@@ -98,7 +74,6 @@ function Home() {
 }
 
 export default Home;
-
 
 const GlobalStyle = createGlobalStyle`
   * { 
@@ -117,12 +92,11 @@ const GlobalStyle = createGlobalStyle`
   /* HERO */
   .home-hero {
     height: 90vh;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     background: url(${bgimage}) center/cover no-repeat;
-    animation: fadeIn 1.5s ease-in-out;
+    position: relative;
   }
 
   .home-hero::before, .home-hero::after {
@@ -239,7 +213,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .service-left img.big, .get-left img.big { max-width:400px; width:100%; border-radius:12px; }
-  .get-left img.small { max-width:220px; width:100%; border-radius:12px; margin-top:15px; animation: floatImage 3s infinite; }
+  .get-left img.small { max-width:220px; width:100%; border-radius:12px; margin-top:15px; }
 
   .service-right, .get-right { max-width:500px; }
 
@@ -277,9 +251,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .call-box:hover { background:#0a8bb8; }
-
-  /* ANIMATIONS */
-  @keyframes floatImage { 0%{ transform: translateY(0);} 50%{ transform: translateY(-10px);} 100%{ transform: translateY(0);} }
 
   /* RESPONSIVE */
   @media (max-width: 1024px) {
