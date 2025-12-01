@@ -30,7 +30,7 @@ function Home() {
       </section>
 
       {/* IMAGE LAYOUT */}
-      <h2 className="section-title">Our Warehouse Services</h2>
+      <h2 className="section-title"><a href="/services">Our Warehouse Services</a></h2>
       <section className="home-infor">
         <div className="cards-image-wrapper">
           <div className="card-column">
@@ -70,7 +70,7 @@ function Home() {
       </section>
 
       {/* WHY CHOOSE US */}
-      <h2 className="section-title">Why Choose Us</h2>
+      <h2 className="section-title"><a href="/about">Why Choose Us</a></h2>
       <div className="features-grid">
         <div className="feature-card"><h4>✔ Professional Team</h4><p>Skilled staff committed to quality.</p></div>
         <div className="feature-card"><h4>✔ Fast Delivery</h4><p>Real-time tracking & quick dispatch.</p></div>
@@ -85,7 +85,7 @@ function Home() {
           <img src={bgimage6} alt="Forklift" className="small" />
         </div>
         <div className="get-right">
-          <h4>GET TO KNOW US</h4>
+          <h3>GET TO KNOW US</h3>
           <h2>Welcome to Forklift Rent and Services</h2>
           <p>We specialize in providing top-notch solutions for all your forklift needs. Efficiency, safety, and reliability are our priorities.</p>
           <p><strong>We have 20+ years of experience in forklift and forklift services.</strong></p>
@@ -167,6 +167,13 @@ const GlobalStyle = createGlobalStyle`
   .h_button button a { color: #fff; text-decoration: none; }
 
   /* SECTIONS */
+  .section-title a{
+  text-decoration: none;
+  }
+
+  .section-title a:active{
+  color: #0a8bb8;
+  }
   .section-title { text-align: center; font-size: 2.4rem; margin: 60px 0 30px; color: #333D79; }
 
   .home-infor {
@@ -245,20 +252,71 @@ const GlobalStyle = createGlobalStyle`
   .call-box:hover { background:#0a8bb8; }
 
   /* GET TO KNOW US */
-  .get-to-know {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    max-width: 1200px;
-    margin:auto;
-    padding: 60px 20px;
-  }
+.get-to-know {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 20px;
+}
 
-  .get-left img.big { max-width:400px; width:100%; border-radius:12px; }
-  .get-left img.small { max-width:220px; width:100%; border-radius:12px; margin-top:15px; }
-  .get-right { max-width:500px; }
+.get-left {
+  position: relative;
+}
+
+.get-left img.big {
+  width: 330px;
+  border-radius: 12px;
+}
+
+.get-left img.small {
+  width: 180px;
+  border-radius: 12px;
+  position: absolute;
+  bottom: -18px;
+  left: 83%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 6px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.get-right {
+  max-width: 520px;
+}
+
+.get-right h3 {
+  color: #000000;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.get-right h2 {
+  margin-bottom: 15px;
+  color: #333D79;
+  font-size: 28px;
+}
+
+.call-box {
+  margin-top: 20px;
+  background: #333D79;
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+ cursor: pointer;
+  transition: 0.3s;
+  display: inline-block;   /* ✔ prevents full width */
+  width: auto;             /* ✔ only as wide as text */
+  max-width: fit-content; 
+}
+
+.call-box:hover {
+  background: #0075b5;
+}
 
   /* INFRASTRUCTURE SECTION */
   .infrastructure-section {
