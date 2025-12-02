@@ -58,7 +58,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #314981;
+    background: #333D79;
     padding: 16px 40px;
     position: sticky;
     top: 0;

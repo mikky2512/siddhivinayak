@@ -166,6 +166,7 @@ const GlobalStyle = createGlobalStyle`
 
   /* SECTIONS */
   .section-title a{
+  color: #333d79;
   text-decoration: none;
   }
 
