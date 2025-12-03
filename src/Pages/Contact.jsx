@@ -149,7 +149,7 @@ const GlobalStyle = createGlobalStyle`
 
 .feedback-card button {
   margin-top: 15px;
-  background: #3949ab;
+  background: #333d79;
   color: #fff;
   padding: 12px;
   border: none;
@@ -160,7 +160,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 .feedback-card button:hover {
-  background: #303f9f;
+  background: #0a8bb8;
 }
 
 /* RESPONSIVE */
